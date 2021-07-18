@@ -1,5 +1,6 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -18,7 +19,9 @@ export default function Home() {
 
         <main>
           <h1>Welcome Wolves!</h1>
-          <a href="/api/auth/logout">Logout</a>
+          <Link href="/api/auth/logout">
+            <a>Logout</a>
+          </Link>
         </main>
 
         <footer>Made by Coach James.</footer>
@@ -28,14 +31,13 @@ export default function Home() {
 
   return (
     <div className="wolf-bg flex items-center justify-center min-h-screen h-full">
-      <a
-        href="/api/auth/login"
-        className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center"
-      >
-        <span className="text-2xl italic">Are you a wolf?</span>
-        <br />
-        <span className="text-xs uppercase">Click to login</span>
-      </a>
+      <Link href="/api/auth/login">
+        <a className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
+          <span className="text-2xl italic">Are you a wolf?</span>
+          <br />
+          <span className="text-xs uppercase">Click to login</span>
+        </a>
+      </Link>
     </div>
   );
 }
