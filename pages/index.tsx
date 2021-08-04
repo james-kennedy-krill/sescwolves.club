@@ -4,48 +4,56 @@ import Link from "next/link";
 import { table, minifyRecords, Player } from "./api/utils/Airtable";
 
 export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
-  console.log(initialPlayers);
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
-  if (user) {
-    return (
-      <div>
-        <Head>
-          <title>SESC - U10 Girls - Wolves - Silver/Gold - Bronze</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <main>
-          <h1>Welcome Wolves!</h1>
-          <Link href="/api/auth/logout">
-            <a>Logout</a>
-          </Link>
-        </main>
-
-        <footer>Made by Coach James.</footer>
-      </div>
-    );
-  }
-
   return (
-    <div className="wolf-bg flex flex-col items-center justify-center min-h-screen h-full w-full">
-      <h1 className="font-merriweather text-4xl text-center text-white mb-4 bg-black bg-opacity-50 w-full p-4 rounded">
-        SouthEast Soccer Club
-        <br />
-        U9/U10 Girls
-        <br />
-        Wolves
-      </h1>
-      <Link href="/api/auth/login">
-        <a className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
-          <span className="text-2xl italic">Are you a wolf?</span>
-          <br />
-          <span className="text-xs uppercase">Click to login</span>
-        </a>
-      </Link>
+    <div>
+      <Head>
+        <title>SESC - U10 Girls - Wolves - Silver/Gold - Bronze</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="rounded bg-white p-5 h-full my-10">
+        <h1 className="text-4xl font-bold font-merriweather mb-2">
+          Welcome Wolves!
+        </h1>
+        <p className="mb-4">
+          The Wolves is a Southeast Portland Soccer Competivie/Development team
+          made up of girls born on or after 2012.
+        </p>
+        {user && (
+          <div className="flex items-center justify-around">
+            <Link href="/team">
+              <a className="flex-1 text-center text-2xl flex items-center justify-center h-32 mx-2 border-2 border-gray-200 bg-gray-100 hover:bg-blue-500 hover:text-white">
+                Team Roster
+              </a>
+            </Link>
+            <Link href="/schedule">
+              <a className="flex-1 text-center text-2xl flex items-center justify-center h-32 mx-2 border-2 border-gray-200 bg-gray-100 hover:bg-blue-500 hover:text-white">
+                Schedule
+              </a>
+            </Link>
+          </div>
+        )}
+        {!user && (
+          <div>
+            <Link href="/api/auth/login">
+              <a className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
+                <span className="text-2xl italic">Are you a wolf?</span>
+                <br />
+                <span className="text-xs uppercase">Click to login</span>
+              </a>
+            </Link>
+          </div>
+        )}
+      </main>
+
+      <footer className="flex items-center justify-center bg-gray-100 p-5 mt-auto w-full rounded border-2 border-gray-200">
+        Made by Coach James.
+      </footer>
     </div>
   );
 }
