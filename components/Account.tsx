@@ -4,7 +4,7 @@ import { useUser } from "@auth0/nextjs-auth0";
 
 const Account = (): JSX.Element => {
   const { user, error, isLoading } = useUser();
-
+  console.log(user);
   return (
     <div>
       {user && !!user.picture && (
