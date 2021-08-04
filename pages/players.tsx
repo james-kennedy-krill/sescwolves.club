@@ -69,7 +69,7 @@ export default function Home({
                     <option value="lastName">Last Name</option>
                     {user &&
                       hasRole(
-                        user["https://www.sescwolves.club/roles"],
+                        user["https://www.sescwolves.club/roles"] as string[],
                         "Coach"
                       ) && <option value="rating">Player Rating</option>}
                   </select>
