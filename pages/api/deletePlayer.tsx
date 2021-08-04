@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { table, getMinifiedRecord } from "./utils/Airtable";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const deletePlayer = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id } = req.body;
   try {
     const deletedRecords: readonly any[] = await table.destroy([id]);
@@ -12,3 +12,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ msg: "Something went wrong" });
   }
 };
+
+export default deletePlayer;

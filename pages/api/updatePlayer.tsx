@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { table, getMinifiedRecord } from "./utils/Airtable";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const updatePlayer = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id, fields } = req.body;
   try {
     const updatedRecords: readonly any[] = await table.update([{ id, fields }]);
@@ -12,3 +12,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ msg: "Something went wrong" });
   }
 };
+
+export default updatePlayer;

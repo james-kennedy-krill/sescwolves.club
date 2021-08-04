@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { table, minifyRecords } from "./utils/Airtable";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const createPlayer = async (req: NextApiRequest, res: NextApiResponse) => {
   const { firstName, lastName } = req.body;
   try {
     const createdRecords: readonly any[] = await table.create([
@@ -18,3 +18,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ msg: "Something went wrong" });
   }
 };
+
+export default createPlayer;

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { table, statsTable, minifyRecords } from "./utils/Airtable";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const getPlayers = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { sortBy = "rating", direction = "desc" } = req.query;
     if (
@@ -21,3 +21,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ msg: "Something went wrong" });
   }
 };
+
+export default getPlayers;

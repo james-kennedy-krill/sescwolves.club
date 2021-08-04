@@ -107,6 +107,7 @@ const Player = ({
                     className={`col-start-${
                       index + 1
                     } col-span-1 flex flex-col-reverse items-end`}
+                    key={stat}
                   >
                     <div className="w-full text-center text-xs font-bold">
                       {stat.substr(0, 1).toUpperCase()}

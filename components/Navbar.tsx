@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 import LoginBtn from "./LoginBtn";
 import Account from "./Account";
@@ -12,12 +13,11 @@ const Navbar = (): JSX.Element => {
         SESC Wolves - U10 Girls
       </p>
       <div className="flex items-center">
-        <a
-          href="/players"
-          className="rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 mr-5"
-        >
-          Players
-        </a>
+        <Link href="/players">
+          <a className="rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 mr-5">
+            Players
+          </a>
+        </Link>
         <LoginBtn />
         {user && <Account />}
       </div>
