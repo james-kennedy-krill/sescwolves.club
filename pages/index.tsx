@@ -1,8 +1,10 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Link from "next/link";
+import { table, minifyRecords, Player } from "./api/utils/Airtable";
 
-export default function Home() {
+export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
+  console.log(initialPlayers);
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
@@ -29,7 +31,14 @@ export default function Home() {
   }
 
   return (
-    <div className="wolf-bg flex items-center justify-center min-h-screen h-full">
+    <div className="wolf-bg flex flex-col items-center justify-center min-h-screen h-full w-full">
+      <h1 className="font-merriweather text-4xl text-center text-white mb-4 bg-black bg-opacity-50 w-full p-4 rounded">
+        SouthEast Soccer Club
+        <br />
+        U9/U10 Girls
+        <br />
+        Wolves
+      </h1>
       <Link href="/api/auth/login">
         <a className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
           <span className="text-2xl italic">Are you a wolf?</span>

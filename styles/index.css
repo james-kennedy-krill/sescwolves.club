@@ -4,4 +4,5 @@
 
 body {
   background: center / cover no-repeat url("/soccer-ball.jpg");
+  background-attachment: fixed;
 }
