@@ -25,11 +25,11 @@ export default function Home({
 
   useEffect(() => {
     setPlayers(initialPlayers);
-  });
+  }, []);
 
   useEffect(() => {
     sortPlayers(sortBy, direction);
-  }, [sortBy, direction, sortPlayers]);
+  }, [sortBy, direction]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
