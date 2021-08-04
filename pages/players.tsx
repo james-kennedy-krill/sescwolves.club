@@ -89,7 +89,7 @@ export default function Home({
                 </div>
                 {user &&
                   hasRole(
-                    user["https://www.sescwolves.club/roles"],
+                    user["https://www.sescwolves.club/roles"] as string[],
                     "Coach"
                   ) && (
                     <div>

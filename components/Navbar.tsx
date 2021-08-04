@@ -15,7 +15,7 @@ const Navbar = (): JSX.Element => {
       </p>
       <div className="flex items-center">
         {user &&
-          hasRole(user["https://www.sescwolves.club/roles"], [
+          hasRole(user["https://www.sescwolves.club/roles"] as string[], [
             "Coach",
             "Parent",
             "Family",

@@ -62,16 +62,20 @@ const Player = ({
             <span className="italic">{player.fields.position.join(", ")}</span>
           </div>
         )}
-        {user && hasRole(user["https://www.sescwolves.club/roles"], "Coach") && (
-          <div
-            className="bg-indigo-700 hover:bg-indigo-900 text-white w-10 h-10 rounded-full col-start-8 col-span-1 justify-self-end flex items-center justify-center cursor-pointer"
-            onClick={() => setCardOpen(!cardOpen)}
-          >
-            <span className="material-icons">
-              {cardOpen ? `remove` : `add`}
-            </span>
-          </div>
-        )}
+        {user &&
+          hasRole(
+            user["https://www.sescwolves.club/roles"] as string[],
+            "Coach"
+          ) && (
+            <div
+              className="bg-indigo-700 hover:bg-indigo-900 text-white w-10 h-10 rounded-full col-start-8 col-span-1 justify-self-end flex items-center justify-center cursor-pointer"
+              onClick={() => setCardOpen(!cardOpen)}
+            >
+              <span className="material-icons">
+                {cardOpen ? `remove` : `add`}
+              </span>
+            </div>
+          )}
       </div>
       {cardOpen && (
         <div className="border-t-2 border-gray pt-5 my-4">
