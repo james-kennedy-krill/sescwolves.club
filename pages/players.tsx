@@ -11,6 +11,7 @@ import {
   minifyRecords,
   Player as PlayerType,
 } from "./api/utils/Airtable";
+import { hasRole } from "../components/utils";
 
 export default function Home({
   initialPlayers,
@@ -66,7 +67,11 @@ export default function Home({
                   >
                     <option value="firstName">First Name</option>
                     <option value="lastName">Last Name</option>
-                    <option value="rating">Player Rating</option>
+                    {user &&
+                      hasRole(
+                        user["https://www.sescwolves.club/roles"],
+                        "Coach"
+                      ) && <option value="rating">Player Rating</option>}
                   </select>
                   <select
                     onChange={(e) => {
@@ -82,21 +87,27 @@ export default function Home({
                     <option value="desc">Descending</option>
                   </select>
                 </div>
-                <div>
-                  <span
-                    className="cursor-pointer underline text-sm"
-                    onClick={() => setExpand(true)}
-                  >
-                    Expand All
-                  </span>{" "}
-                  /{" "}
-                  <span
-                    className="cursor-pointer underline text-sm"
-                    onClick={() => setExpand(false)}
-                  >
-                    Collapse All
-                  </span>
-                </div>
+                {user &&
+                  hasRole(
+                    user["https://www.sescwolves.club/roles"],
+                    "Coach"
+                  ) && (
+                    <div>
+                      <span
+                        className="cursor-pointer underline text-sm"
+                        onClick={() => setExpand(true)}
+                      >
+                        Expand All
+                      </span>{" "}
+                      /{" "}
+                      <span
+                        className="cursor-pointer underline text-sm"
+                        onClick={() => setExpand(false)}
+                      >
+                        Collapse All
+                      </span>
+                    </div>
+                  )}
               </div>
             </div>
             {players && (
