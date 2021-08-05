@@ -41,9 +41,8 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
         {!user && (
           <div>
             <Link href="/api/auth/login">
-              <a className="border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
+              <a className="flex flex-col justify-center items-center border-2 border-blue-800 bg-blue-300 hover:bg-blue-700 hover:text-white py-3 px-6 rounded-full text-center">
                 <span className="text-2xl italic">Are you a wolf?</span>
-                <br />
                 <span className="text-xs uppercase">Click to login</span>
               </a>
             </Link>
