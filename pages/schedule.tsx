@@ -30,15 +30,21 @@ const Schedule = withPageAuthRequired(() => {
             </h2>
             <p className="mb-4 flex items-center justify-around">
               <Link href="http://www.gotsport.com/events/schedule.aspx?EventID=80394&GroupID=976139&Gender=Girls&Age=10">
-                <a className="underline">Schedule</a>
+                <a target="_blank" className="underline">
+                  Schedule
+                </a>
               </Link>
               {" | "}
               <Link href="http://www.gotsport.com/events/results.aspx?EventID=80394&GroupID=976139&Gender=Girls&Age=10">
-                <a className="underline">Standings</a>
+                <a target="_blank" className="underline">
+                  Standings
+                </a>
               </Link>
               {" | "}
               <Link href="http://www.gotsport.com/events/resultsgrid.aspx?EventID=80394&GroupID=976139">
-                <a className="underline">Results</a>
+                <a target="_blank" className="underline">
+                  Results
+                </a>
               </Link>
             </p>
 
