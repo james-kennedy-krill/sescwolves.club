@@ -43,37 +43,53 @@ const Schedule = withPageAuthRequired(() => {
             </p>
 
             <h3 className="text-2xl font-bold">Friday, August 6th 2021</h3>
-            <p className="mb-3">
-              <strong>5:30pm</strong>: @ FCSC Nemesis Blue{" "}
+            <p className="mb-3 flex items-start justify-between">
+              <span>
+                <strong>5:30pm</strong>: @ FCSC Nemesis Blue{" "}
+              </span>
               <span className="text-green-500 italic font-bold">W 2-0</span>
             </p>
 
             <h3 className="text-2xl font-bold">Saturday, August 7th 2021</h3>
-            <p className="mb-3 flex items-center justify-between">
+            <p className="mb-3 flex items-start justify-between">
               <span>
                 <strong>9:00am</strong>: @ Pacific FC Fuego
               </span>
               <span className="text-gray-900 font-bold">L 0-3</span>
             </p>
-            <p className="mb-3">
-              <strong>6:00pm</strong>: vs. WUFC Gold{" "}
+            <p className="mb-3 flex items-start justify-between">
+              <span>
+                <strong>6:00pm</strong>: vs. WUFC Gold <br /> (wear WHITE; bring
+                BLUE)
+              </span>
               <span className="text-gray-500 italic">Field 2A</span>
-              <br /> (wear WHITE; bring BLUE)
             </p>
 
             <h3 className="text-2xl font-bold">Sunday, August 8th 2021</h3>
-            <p className="mb-3">
-              <strong>9:00am</strong>: vs Eastside Thorns Red{" "}
+            <p className="mb-3 flex items-start justify-between">
+              <span>
+                <strong>9:00am</strong>: vs Eastside Thorns Red <br /> (wear
+                WHITE; bring BLUE)
+              </span>
               <span className="text-gray-500 italic">Field 2A</span>
-              <br /> (wear WHITE; bring BLUE)
             </p>
-            <p className="mb-3">
-              <strong>1:30pm</strong>: vs. TBD{" "}
+            <p className="mb-3 flex items-center justify-between">
+              <span>
+                <strong>1:30pm</strong>: vs. TBD <br /> (if necessary,
+                championship game)
+              </span>
               <span className="text-gray-500 italic">Field 2A</span>
-              <br /> (if necessary, championship game)
             </p>
           </div>
-          <Image src={mthoodchallenge} />
+          <hr />
+          <div className="py-4 my-4">
+            <h2 className="text-2xl font-bold mb-4">Photos</h2>
+            <Image src={mthoodchallenge} />
+            <p className="text-sm italic text-gray-400">
+              Wolves (left to right): Isa, Jozy, Camille, Olivia, Amara, Nora B,
+              Nora V, Etta, Skye
+            </p>
+          </div>
         </div>
       </main>
     </div>
