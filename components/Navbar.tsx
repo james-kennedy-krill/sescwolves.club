@@ -40,6 +40,11 @@ const Navbar = (): JSX.Element => {
                   Schedule
                 </a>
               </Link>
+              <Link href="/tournaments">
+                <a className="rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 mr-5">
+                  Tournaments
+                </a>
+              </Link>
             </>
           )}
         <LoginBtn />
