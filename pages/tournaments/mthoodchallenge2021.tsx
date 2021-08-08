@@ -74,12 +74,18 @@ const MtHoodChallenge = withPageAuthRequired(() => {
           <hr />
           <div className="py-4 my-4">
             <h2 className="text-2xl font-bold mb-4">Photos</h2>
-            <Image src={mthoodchallenge_image} />
+            <Image
+              src={mthoodchallenge_image}
+              alt="Photo of team at tournament"
+            />
             <p className="text-sm italic text-gray-400 mb-4">
               Wolves (left to right): Isa, Jozy, Camille, Olivia, Amara, Nora B,
               Nora V, Etta, Skye
             </p>
-            <Image src={mthoodchallenge_image2} />
+            <Image
+              src={mthoodchallenge_image2}
+              alt="Photo of team checking in"
+            />
             <p className="text-sm italic text-gray-400 mb-4">
               Preparing for our last game at the tournament. The Wolves had one
               win and three losses and finished in 4th with 11 points.
