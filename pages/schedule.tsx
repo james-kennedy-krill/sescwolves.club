@@ -65,10 +65,9 @@ const Schedule = withPageAuthRequired(() => {
             </p>
             <p className="mb-3 flex items-start justify-between">
               <span>
-                <strong>6:00pm</strong>: vs. WUFC Gold <br /> (wear WHITE; bring
-                BLUE)
+                <strong>6:00pm</strong>: vs. WUFC Gold
               </span>
-              <span className="text-gray-500 italic">Field 2A</span>
+              <span className="text-gray-900 font-bold">L 2-4</span>
             </p>
 
             <h3 className="text-2xl font-bold">Sunday, August 8th 2021</h3>
