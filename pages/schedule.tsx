@@ -26,7 +26,9 @@ const Schedule = withPageAuthRequired(() => {
           <hr />
           <div className="my-5 py-5">
             <h2 className="text-3xl font-bold mb-4 text-center">
-              Mt. Hood Challenge
+              <Link href="/tournaments/mthoodchallenge2021">
+                <a className="underline">Mt. Hood Challenge</a>
+              </Link>
             </h2>
             <p className="mb-4 flex items-center justify-around">
               <Link href="http://www.gotsport.com/events/schedule.aspx?EventID=80394&GroupID=976139&Gender=Girls&Age=10">
@@ -73,26 +75,9 @@ const Schedule = withPageAuthRequired(() => {
             <h3 className="text-2xl font-bold">Sunday, August 8th 2021</h3>
             <p className="mb-3 flex items-start justify-between">
               <span>
-                <strong>9:00am</strong>: vs Eastside Thorns Red <br /> (wear
-                WHITE; bring BLUE)
+                <strong>9:00am</strong>: vs Eastside Thorns Red
               </span>
-              <span className="text-gray-500 italic">Field 2A</span>
-            </p>
-            <p className="mb-3 flex items-center justify-between">
-              <span>
-                <strong>1:30pm</strong>: vs. TBD <br /> (if necessary,
-                championship game)
-              </span>
-              <span className="text-gray-500 italic">Field 2A</span>
-            </p>
-          </div>
-          <hr />
-          <div className="py-4 my-4">
-            <h2 className="text-2xl font-bold mb-4">Photos</h2>
-            <Image src={mthoodchallenge} />
-            <p className="text-sm italic text-gray-400">
-              Wolves (left to right): Isa, Jozy, Camille, Olivia, Amara, Nora B,
-              Nora V, Etta, Skye
+              <span className="text-gray-900 font-bold">L 0-3</span>
             </p>
           </div>
         </div>
