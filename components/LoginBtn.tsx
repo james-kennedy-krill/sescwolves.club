@@ -4,16 +4,21 @@ import { useUser } from "@auth0/nextjs-auth0";
 
 type LoginBtnProps = {
   redirect?: string;
+  className?: string;
 };
 
-const LoginBtn = ({ redirect }: LoginBtnProps): JSX.Element => {
+const LoginBtn = ({ redirect, className }: LoginBtnProps): JSX.Element => {
   const { user, error, isLoading } = useUser();
 
   return (
     <>
       {user ? (
         <Link href="/api/auth/logout">
-          <a className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4">
+          <a
+            className={`${
+              className ? className : ""
+            } rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4`}
+          >
             Logout
           </a>
         </Link>
@@ -21,7 +26,11 @@ const LoginBtn = ({ redirect }: LoginBtnProps): JSX.Element => {
         <Link
           href={`/api/auth/login${redirect ? "?redirect=" + redirect : ""}`}
         >
-          <a className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4">
+          <a
+            className={`${
+              className ? className : ""
+            } rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4`}
+          >
             Login
           </a>
         </Link>

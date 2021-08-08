@@ -19,7 +19,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        merriweather: ['"Merriweather"', "sans-serif"],
+        merriweather: ['"Merriweather"', "serif"],
+        lato: ['"Lato"', "sans-serif"],
       },
     },
   },
