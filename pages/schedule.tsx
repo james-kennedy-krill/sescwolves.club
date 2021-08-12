@@ -64,7 +64,7 @@ const Schedule = withPageAuthRequired(() => {
                 <span>
                   <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
                     <a className="text-blue-600 underline" target="_blank">
-                      <strong>Lent's Park (turf)</strong>
+                      <strong>Lent&apos;s Park (turf)</strong>
                     </a>
                   </Link>
                 </span>
