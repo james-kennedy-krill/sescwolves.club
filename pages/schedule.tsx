@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { hasRole } from "../components/utils";
-import mthoodchallenge from "../public/mthoodchallenge.jpg";
+import lentspark from "../public/lentspark.png";
+import brentwoodpark from "../public/brentwoodpark.png";
 
 const Schedule = withPageAuthRequired(() => {
   const { user, error, isLoading } = useUser();
@@ -26,59 +27,58 @@ const Schedule = withPageAuthRequired(() => {
           <hr />
           <div className="my-5 py-5">
             <h2 className="text-3xl font-bold mb-4 text-center">
-              <Link href="/tournaments/mthoodchallenge2021">
-                <a className="underline">Mt. Hood Challenge</a>
-              </Link>
+              Fall Practices
             </h2>
-            <p className="mb-4 flex items-center justify-around">
-              <Link href="http://www.gotsport.com/events/schedule.aspx?EventID=80394&GroupID=976139&Gender=Girls&Age=10">
-                <a target="_blank" className="underline">
-                  Schedule
+            <p className="text-center italic">August 16th - November 4th</p>
+
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold">Mondays</h3>
+              <p className="mb-3 flex items-start justify-between">
+                <span>
+                  <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
+                    <a className="text-blue-600 underline" target="_blank">
+                      <strong>Brentwood Field #3</strong>
+                    </a>
+                  </Link>
+                </span>
+                <span className="text-gray-900 italic font-bold">
+                  6:00pm - 7:30pm
+                </span>
+              </p>
+              <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
+                <a target="_blank">
+                  <Image
+                    src={brentwoodpark}
+                    alt="satallite of Brentwood Park"
+                  />
                 </a>
               </Link>
-              {" | "}
-              <Link href="http://www.gotsport.com/events/results.aspx?EventID=80394&GroupID=976139&Gender=Girls&Age=10">
-                <a target="_blank" className="underline">
-                  Standings
+              <p className="text-gray-500 text-sm italic">
+                Click image for directions
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold">Wednesdays</h3>
+              <p className="mb-3 flex items-start justify-between">
+                <span>
+                  <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
+                    <a className="text-blue-600 underline" target="_blank">
+                      <strong>Lent's Park (turf)</strong>
+                    </a>
+                  </Link>
+                </span>
+                <span className="text-gray-900 font-bold">6:00pm - 7:30pm</span>
+              </p>
+              <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
+                <a target="_blank">
+                  <Image src={lentspark} />
                 </a>
               </Link>
-              {" | "}
-              <Link href="http://www.gotsport.com/events/resultsgrid.aspx?EventID=80394&GroupID=976139">
-                <a target="_blank" className="underline">
-                  Results
-                </a>
-              </Link>
-            </p>
-
-            <h3 className="text-2xl font-bold">Friday, August 6th 2021</h3>
-            <p className="mb-3 flex items-start justify-between">
-              <span>
-                <strong>5:30pm</strong>: @ FCSC Nemesis Blue{" "}
-              </span>
-              <span className="text-green-500 italic font-bold">W 2-0</span>
-            </p>
-
-            <h3 className="text-2xl font-bold">Saturday, August 7th 2021</h3>
-            <p className="mb-3 flex items-start justify-between">
-              <span>
-                <strong>9:00am</strong>: @ Pacific FC Fuego
-              </span>
-              <span className="text-gray-900 font-bold">L 0-3</span>
-            </p>
-            <p className="mb-3 flex items-start justify-between">
-              <span>
-                <strong>6:00pm</strong>: vs. WUFC Gold
-              </span>
-              <span className="text-gray-900 font-bold">L 2-4</span>
-            </p>
-
-            <h3 className="text-2xl font-bold">Sunday, August 8th 2021</h3>
-            <p className="mb-3 flex items-start justify-between">
-              <span>
-                <strong>9:00am</strong>: vs Eastside Thorns Red
-              </span>
-              <span className="text-gray-900 font-bold">L 0-3</span>
-            </p>
+              <p className="text-gray-500 text-sm italic">
+                Click image for directions
+              </p>
+            </div>
           </div>
         </div>
       </main>

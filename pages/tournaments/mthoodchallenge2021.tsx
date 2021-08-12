@@ -65,8 +65,7 @@ const MtHoodChallenge = withPageAuthRequired(() => {
             <h3 className="text-2xl font-bold">Sunday, August 8th 2021</h3>
             <p className="mb-3 flex items-start justify-between">
               <span>
-                <strong>9:00am</strong>: vs Eastside Thorns Red <br /> (wear
-                WHITE; bring BLUE)
+                <strong>9:00am</strong>: vs Eastside Thorns Red
               </span>
               <span className="text-gray-900 font-bold">L 0-3</span>
             </p>

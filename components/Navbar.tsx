@@ -86,7 +86,7 @@ const Navbar = (): JSX.Element => {
               <Link href="/team">
                 <a
                   onClick={() => setMenuOpen(false)}
-                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:mr-5 md:my-0"
+                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Team
                 </a>
@@ -94,7 +94,7 @@ const Navbar = (): JSX.Element => {
               <Link href="/schedule">
                 <a
                   onClick={() => setMenuOpen(false)}
-                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:mr-5 md:my-0"
+                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Schedule
                 </a>
@@ -102,7 +102,7 @@ const Navbar = (): JSX.Element => {
               <Link href="/tournaments">
                 <a
                   onClick={() => setMenuOpen(false)}
-                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:mr-5 md:my-0"
+                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Tournaments
                 </a>
