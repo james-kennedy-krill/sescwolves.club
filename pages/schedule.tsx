@@ -33,7 +33,7 @@ const Schedule = withPageAuthRequired(() => {
 
             <div className="mb-6">
               <h3 className="text-2xl font-bold">Mondays</h3>
-              <p className="mb-3 flex items-start justify-between">
+              <p className="mb-1 flex items-start justify-between">
                 <span>
                   <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
                     <a className="text-blue-600 underline" target="_blank">
@@ -43,6 +43,44 @@ const Schedule = withPageAuthRequired(() => {
                 </span>
                 <span className="text-gray-900 italic font-bold">
                   6:00pm - 7:30pm
+                </span>
+              </p>
+              <p className="grid grid-cols-6 items-center justify-between mb-3">
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Aug. 16
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Aug. 23
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Aug. 30
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 6
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 13
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 20
+                </span>
+                <span className="col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 27
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 4
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 11
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 18
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 25
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Nov. 1
                 </span>
               </p>
               <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
@@ -60,7 +98,7 @@ const Schedule = withPageAuthRequired(() => {
 
             <div className="mb-4">
               <h3 className="text-2xl font-bold">Wednesdays</h3>
-              <p className="mb-3 flex items-start justify-between">
+              <p className="mb-1 flex items-start justify-between">
                 <span>
                   <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
                     <a className="text-blue-600 underline" target="_blank">
@@ -69,6 +107,44 @@ const Schedule = withPageAuthRequired(() => {
                   </Link>
                 </span>
                 <span className="text-gray-900 font-bold">6:00pm - 7:30pm</span>
+              </p>
+              <p className="grid grid-cols-6 items-center justify-between mb-3">
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Aug. 18
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Aug. 25
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 1
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 8
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 15
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 22
+                </span>
+                <span className="col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Sept. 29
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 6
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 13
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 20
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Oct. 27
+                </span>
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Nov. 3
+                </span>
               </p>
               <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
                 <a target="_blank">
