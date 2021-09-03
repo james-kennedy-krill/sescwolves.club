@@ -33,7 +33,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const Schedule = () => {
   const { user, error, isLoading } = useUser();
 
-  const { data: schedule, error: fetchError } = useSWR<Schedule, any>(
+  const { data: schedule, error: fetchError } = useSWR<Schedule[], any>(
     "/api/getSchedule",
     fetcher
   );
@@ -202,26 +202,27 @@ const Schedule = () => {
                 </tr>
               </thead>
               <tbody>
-                {schedule.map((date: { date: string; games: Game[] }) => (
-                  <>
-                    <TableDateRow key={date.date}>
-                      <TableHeader>{date.date}</TableHeader>
-                      <TableData></TableData>
-                      <TableData></TableData>
-                      <TableData></TableData>
-                      <TableData></TableData>
-                    </TableDateRow>
-                    {date.games.map((game: Game) => (
-                      <tr>
-                        <TableData>{game.team}</TableData>
-                        <TableData>{game.time}</TableData>
-                        <TableData>{game.field}</TableData>
-                        <TableData>{game.homeOrAway}</TableData>
-                        <TableData>{game.opponent}</TableData>
-                      </tr>
-                    ))}
-                  </>
-                ))}
+                {schedule &&
+                  schedule.map((date: { date: string; games: Game[] }) => (
+                    <>
+                      <TableDateRow key={date.date}>
+                        <TableHeader>{date.date}</TableHeader>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                      </TableDateRow>
+                      {date.games.map((game: Game) => (
+                        <tr>
+                          <TableData>{game.team}</TableData>
+                          <TableData>{game.time}</TableData>
+                          <TableData>{game.field}</TableData>
+                          <TableData>{game.homeOrAway}</TableData>
+                          <TableData>{game.opponent}</TableData>
+                        </tr>
+                      ))}
+                    </>
+                  ))}
               </tbody>
             </Table>
           </div>
