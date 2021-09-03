@@ -53,6 +53,50 @@ const Schedule = () => {
             2021-2022 Schedule
           </h1>
           <hr />
+          <div id="fall-season" className="my-5 py-5">
+            <h2 tw="text-2xl font-bold text-center">
+              Fall 2021 Season Schedule
+            </h2>
+            <h3 tw="text-xl font-bold text-center">
+              Silver (S) and Bronze (B)
+            </h3>
+            <Table tw="mt-5">
+              <thead>
+                <tr>
+                  <TableHeader>Date/Team</TableHeader>
+                  <TableHeader>Time</TableHeader>
+                  <TableHeader>Field</TableHeader>
+                  <TableHeader>Home/Away</TableHeader>
+                  <TableHeader>Opponent</TableHeader>
+                </tr>
+              </thead>
+              <tbody>
+                {schedule &&
+                  schedule.map((date: { date: string; games: Game[] }) => (
+                    <>
+                      <TableDateRow key={date.date}>
+                        <TableHeader>{date.date}</TableHeader>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                      </TableDateRow>
+                      {date.games.map((game: Game) => (
+                        <tr
+                          key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
+                        >
+                          <TableData>{game.team}</TableData>
+                          <TableData>{game.time}</TableData>
+                          <TableData>{game.field}</TableData>
+                          <TableData>{game.homeOrAway}</TableData>
+                          <TableData>{game.opponent}</TableData>
+                        </tr>
+                      ))}
+                    </>
+                  ))}
+              </tbody>
+            </Table>
+          </div>
           <div id="fall-practices" className="my-5 py-5">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Fall Practices
@@ -183,50 +227,6 @@ const Schedule = () => {
                 Click image for directions
               </p>
             </div>
-          </div>
-          <div id="fall-season" className="my-5 py-5">
-            <h2 tw="text-2xl font-bold text-center">
-              Fall 2021 Season Schedule
-            </h2>
-            <h3 tw="text-xl font-bold text-center">
-              Silver (S) and Bronze (B)
-            </h3>
-            <Table tw="mt-5">
-              <thead>
-                <tr>
-                  <TableHeader>Date/Team</TableHeader>
-                  <TableHeader>Time</TableHeader>
-                  <TableHeader>Field</TableHeader>
-                  <TableHeader>Home/Away</TableHeader>
-                  <TableHeader>Opponent</TableHeader>
-                </tr>
-              </thead>
-              <tbody>
-                {schedule &&
-                  schedule.map((date: { date: string; games: Game[] }) => (
-                    <>
-                      <TableDateRow key={date.date}>
-                        <TableHeader>{date.date}</TableHeader>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                      </TableDateRow>
-                      {date.games.map((game: Game) => (
-                        <tr
-                          key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
-                        >
-                          <TableData>{game.team}</TableData>
-                          <TableData>{game.time}</TableData>
-                          <TableData>{game.field}</TableData>
-                          <TableData>{game.homeOrAway}</TableData>
-                          <TableData>{game.opponent}</TableData>
-                        </tr>
-                      ))}
-                    </>
-                  ))}
-              </tbody>
-            </Table>
           </div>
         </div>
       </main>
