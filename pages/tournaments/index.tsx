@@ -29,7 +29,7 @@ const Tournaments = withPageAuthRequired(() => {
           </div>
           <hr className="my-5" />
           <Image src={summerslam_image} alt="Photo of team at tournament" />
-          <p className="italic">Champions!</p>
+          <p className="italic font-bold">Summer Slam 2021 Champions!</p>
           <p className="text-sm italic text-gray-400 mb-4">
             Wolves (left to right): Coach James, Sidney, Nora B., Isa, Olivia,
             Amara, Jozy, Camille, Coach Robin, Skye, Etta, Cora, Lucia, Coach
@@ -39,7 +39,7 @@ const Tournaments = withPageAuthRequired(() => {
             src={pcu_summer_classic_image}
             alt="Photo of team at tournament"
           />
-          <p className="italic">Champions!</p>
+          <p className="italic font-bold">PCU Summer Classic 2021 Champions!</p>
           <p className="text-sm italic text-gray-400 mb-4">
             Wolves (left to right): Isa, Etta, Coach James, Megan, Nola, Amelia,
             Sidney, Sylvia, Olivia, Camille, Nora B, Coach Robin, Skye
