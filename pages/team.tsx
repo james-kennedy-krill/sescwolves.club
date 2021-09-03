@@ -14,7 +14,7 @@ import {
 } from "./api/utils/Airtable";
 import { hasRole } from "../components/utils";
 
-type ButtonVariant = "all" | "silver" | "bronze";
+type ButtonVariant = "all" | "Silver" | "Bronze";
 interface ButtonProps {
   variant?: ButtonVariant;
   selected?: boolean;
@@ -23,8 +23,8 @@ interface ButtonProps {
 const buttonVariant: Record<ButtonVariant, TwStyle> = {
   // Named class sets
   all: tw`bg-white text-black`,
-  bronze: tw`bg-yellow-700 text-white`,
-  silver: tw`bg-gray-300 text-black`,
+  Bronze: tw`bg-yellow-700 text-white`,
+  Silver: tw`bg-gray-300 text-black`,
 };
 
 const TeamButton = styled.button<ButtonProps>(({ selected }) => [
@@ -46,7 +46,7 @@ const Team = ({
 }) => {
   const [sortBy, setSortBy] = useState<string>("firstName");
   const [direction, setDirection] = useState<"asc" | "desc">("asc");
-  const [team, setTeam] = useState<"all" | "silver" | "bronze">("all");
+  const [team, setTeam] = useState<"all" | "Silver" | "Bronze">("all");
   const [expand, setExpand] = useState<boolean>(false);
   const { players, setPlayers, sortPlayers, refreshPlayers } =
     useContext(PlayersContext);
@@ -154,16 +154,16 @@ const Team = ({
                   All
                 </TeamButton>
                 <TeamButton
-                  variant="silver"
-                  selected={team === "silver"}
-                  onClick={() => setTeam("silver")}
+                  variant="Silver"
+                  selected={team === "Silver"}
+                  onClick={() => setTeam("Silver")}
                 >
                   Silver
                 </TeamButton>
                 <TeamButton
-                  variant="bronze"
-                  selected={team === "bronze"}
-                  onClick={() => setTeam("bronze")}
+                  variant="Bronze"
+                  selected={team === "Bronze"}
+                  onClick={() => setTeam("Bronze")}
                 >
                   Bronze
                 </TeamButton>
@@ -173,10 +173,7 @@ const Team = ({
               <ul>
                 {players.map((player) => {
                   console.log(player);
-                  if (
-                    team !== "all" &&
-                    team !== player?.fields?.team?.toLowerCase()
-                  ) {
+                  if (team !== "all" && team !== player?.fields?.team) {
                     return null;
                   }
                   return (

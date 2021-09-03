@@ -213,7 +213,9 @@ const Schedule = () => {
                         <TableData></TableData>
                       </TableDateRow>
                       {date.games.map((game: Game) => (
-                        <tr>
+                        <tr
+                          key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
+                        >
                           <TableData>{game.team}</TableData>
                           <TableData>{game.time}</TableData>
                           <TableData>{game.field}</TableData>
