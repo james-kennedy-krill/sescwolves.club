@@ -2,6 +2,8 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import summerslam_image from "../../public/summer-slam2021.jpg";
+import pcu_summer_classic_image from "../../public/pcu-summer-classic2021.jpg";
 
 const Tournaments = withPageAuthRequired(() => {
   return (
@@ -25,6 +27,23 @@ const Tournaments = withPageAuthRequired(() => {
               </a>
             </Link>
           </div>
+          <hr className="my-5" />
+          <Image src={summerslam_image} alt="Photo of team at tournament" />
+          <p className="italic">Champions!</p>
+          <p className="text-sm italic text-gray-400 mb-4">
+            Wolves (left to right): Coach James, Sidney, Nora B., Isa, Olivia,
+            Amara, Jozy, Camille, Coach Robin, Skye, Etta, Cora, Lucia, Coach
+            Mkonu
+          </p>
+          <Image
+            src={pcu_summer_classic_image}
+            alt="Photo of team at tournament"
+          />
+          <p className="italic">Champions!</p>
+          <p className="text-sm italic text-gray-400 mb-4">
+            Wolves (left to right): Isa, Etta, Coach James, Megan, Nola, Amelia,
+            Sidney, Sylvia, Olivia, Camille, Nora B, Coach Robin, Skye
+          </p>
         </div>
       </main>
     </div>
