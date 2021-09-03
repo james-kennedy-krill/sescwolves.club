@@ -24,7 +24,7 @@ type Schedule = {
 };
 
 const Table = tw.table`w-full border-collapse`;
-const TableHeader = tw.th`font-bold text-base md:text-lg text-left p-2`;
+const TableHeader = tw.th`font-bold text-xs md:text-lg text-left p-2`;
 const TableDateRow = tw.tr`text-sm md:text-base border-b-2 border-gray-300 bg-gray-100`;
 const TableData = tw.td`text-xs md:text-base pt-1 pb-2 px-2 text-left`;
 
