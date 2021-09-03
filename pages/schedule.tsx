@@ -24,9 +24,9 @@ type Schedule = {
 };
 
 const Table = tw.table`w-full border-collapse`;
-const TableHeader = tw.th`font-bold text-lg text-left p-2`;
-const TableDateRow = tw.tr`border-b-2 border-gray-300 bg-gray-100`;
-const TableData = tw.td`pt-1 pb-2 px-2 text-left`;
+const TableHeader = tw.th`font-bold text-base md:text-lg text-left p-2`;
+const TableDateRow = tw.tr`text-sm md:text-base border-b-2 border-gray-300 bg-gray-100`;
+const TableData = tw.td`text-xs md:text-base pt-1 pb-2 px-2 text-left`;
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -49,15 +49,15 @@ const Schedule = () => {
       </Head>
       <main>
         <div className="bg-white rounded py-2 px-4 shadow-lg mt-5">
-          <h1 className="text-4xl font-bold text-center mb-2">
+          <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
             2021-2022 Schedule
           </h1>
           <hr />
           <div id="fall-season" className="my-5 py-5">
-            <h2 tw="text-2xl font-bold text-center">
+            <h2 tw="text-xl md:text-2xl font-bold text-center">
               Fall 2021 Season Schedule
             </h2>
-            <h3 tw="text-xl font-bold text-center">
+            <h3 tw="text-lg md:text-xl font-bold text-center">
               Silver (S) and Bronze (B)
             </h3>
             <Table tw="mt-5">
