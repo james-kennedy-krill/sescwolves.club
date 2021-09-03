@@ -1,7 +1,7 @@
 import tw, { styled } from "twin.macro";
 
 export const Container = tw.main`rounded bg-white 
-p-8 h-full my-10 
+p-4 md:p-8 h-full my-10 mx-2 md:mx-0
 shadow-2xl`;
 
 export const NavButton = styled.a({

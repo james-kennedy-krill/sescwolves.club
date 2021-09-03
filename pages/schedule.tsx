@@ -7,6 +7,7 @@ import Link from "next/link";
 import tw from "twin.macro";
 import Navbar from "../components/Navbar";
 import { hasRole } from "../components/utils";
+import { Container } from "../styles/common-styles";
 import lentspark from "../public/lentspark.png";
 import brentwoodpark from "../public/brentwoodpark.png";
 
@@ -47,8 +48,8 @@ const Schedule = () => {
         <title>Schedule</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className="bg-white rounded py-2 px-0 md:px-4 shadow-lg mt-5">
+      <Container>
+        <div>
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
             2021-2022 Schedule
           </h1>
@@ -229,7 +230,7 @@ const Schedule = () => {
             </div>
           </div>
         </div>
-      </main>
+      </Container>
     </div>
   );
 };

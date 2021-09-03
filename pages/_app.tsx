@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <UserProvider>
       <PlayersProvider>
         <Navbar />
-        <div className="container mx-auto max-w-xl">
+        <div className="container mx-auto md:max-w-3xl">
           <Component {...pageProps} />
         </div>
       </PlayersProvider>

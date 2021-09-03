@@ -2,6 +2,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "../../styles/common-styles";
 import summerslam_image from "../../public/summer-slam2021.jpg";
 import pcu_summer_classic_image from "../../public/pcu-summer-classic2021.jpg";
 
@@ -12,8 +13,8 @@ const Tournaments = withPageAuthRequired(() => {
         <title>Tournament Results</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className="bg-white rounded p-4 shadow-xl mt-5">
+      <Container>
+        <div>
           <h1 className="text-4xl font-bold text-center mb-2">Tournaments</h1>
           <div className="grid grid-cols-2 items-center">
             <Link href="/tournaments/summerslam">
@@ -45,7 +46,7 @@ const Tournaments = withPageAuthRequired(() => {
             Sidney, Sylvia, Olivia, Camille, Nora B, Coach Robin, Skye
           </p>
         </div>
-      </main>
+      </Container>
     </div>
   );
 });

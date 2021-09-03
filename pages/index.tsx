@@ -1,9 +1,12 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import tw, { styled } from "twin.macro";
 import { table, minifyRecords, Player } from "./api/utils/Airtable";
 import { Container, NavButton } from "../styles/common-styles";
+
+import summerslam_image from "../public/summer-slam2021.jpg";
 
 const LoginButton = tw.a`flex flex-col justify-center items-center bg-blue-500 hover:bg-blue-700 text-white py-3 px-6 rounded text-center cursor-pointer`;
 
@@ -29,23 +32,35 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
           made up of girls born on or after 2012.
         </p>
         {user && (
-          <div className="flex flex-col space-y-4">
-            <Link href="/team">
-              <NavButton>
-                Team Roster{" "}
-                <span>U10 Wolves have two teams: Bronze and Silver</span>
-              </NavButton>
-            </Link>
-            <Link href="/schedule">
-              <NavButton>
-                Schedule<span>Game and Practice schedules for both teams</span>
-              </NavButton>
-            </Link>
-            <Link href="/tournaments">
-              <NavButton>
-                Tournaments<span>Schedule, Results, Photos and more</span>
-              </NavButton>
-            </Link>
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col space-y-4">
+              <Link href="/team">
+                <NavButton>
+                  Team Roster{" "}
+                  <span>U10 Wolves have two teams: Bronze and Silver</span>
+                </NavButton>
+              </Link>
+              <Link href="/schedule">
+                <NavButton>
+                  Schedule
+                  <span>Game and Practice schedules for both teams</span>
+                </NavButton>
+              </Link>
+              <Link href="/tournaments">
+                <NavButton>
+                  Tournaments<span>Schedule, Results, Photos and more</span>
+                </NavButton>
+              </Link>
+            </div>
+            <div className="mt-5 md:mt-0 md:ml-5 md:w-1/2">
+              <Image src={summerslam_image} alt="Photo of team at tournament" />
+              <p className="italic font-bold">Summer Slam 2021 Champions!</p>
+              <p className="text-sm italic text-gray-400 mb-4">
+                Wolves (left to right): Coach James, Sidney, Nora B., Isa,
+                Olivia, Amara, Jozy, Camille, Coach Robin, Skye, Etta, Cora,
+                Lucia, Coach Mkonu
+              </p>
+            </div>
           </div>
         )}
         {!user && (
