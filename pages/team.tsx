@@ -1,10 +1,7 @@
-import {
-  useUser,
-  withPageAuthRequired,
-  UserProfile,
-} from "@auth0/nextjs-auth0";
+import { withPageAuthRequired, UserProfile } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Link from "next/link";
+import tw, { styled, TwStyle } from "twin.macro";
 import Navbar from "../components/Navbar";
 import Player from "../components/Player";
 import LoginBtn from "../components/LoginBtn";
@@ -17,25 +14,51 @@ import {
 } from "./api/utils/Airtable";
 import { hasRole } from "../components/utils";
 
+type ButtonVariant = "all" | "silver" | "bronze";
+interface ButtonProps {
+  variant?: ButtonVariant;
+  selected?: boolean;
+}
+
+const buttonVariant: Record<ButtonVariant, TwStyle> = {
+  // Named class sets
+  all: tw`bg-white text-black`,
+  bronze: tw`bg-yellow-700 text-white`,
+  silver: tw`bg-gray-300 text-black`,
+};
+
+const TeamButton = styled.button<ButtonProps>(({ selected }) => [
+  // Return a function here
+  tw`flex w-full items-center justify-center p-2 m-2 rounded shadow-lg text-sm uppercase font-bold`,
+  ({ variant = "all" }) => buttonVariant[variant], // Grab the variant style via a prop
+  tw`border-4 border-transparent`,
+  selected && tw`border-4 border-blue-500`,
+]);
+
 const Team = ({
-  initialPlayers,
   user,
   error,
   isLoading,
 }: {
-  initialPlayers: PlayerType[];
   user: UserProfile | undefined;
   error: Error | undefined;
   isLoading: boolean;
 }) => {
   const [sortBy, setSortBy] = useState<string>("firstName");
   const [direction, setDirection] = useState<"asc" | "desc">("asc");
+  const [team, setTeam] = useState<"all" | "silver" | "bronze">("all");
   const [expand, setExpand] = useState<boolean>(false);
-  // const { user, error, isLoading } = useUser();
-  const { players, setPlayers, sortPlayers } = useContext(PlayersContext);
+  const { players, setPlayers, sortPlayers, refreshPlayers } =
+    useContext(PlayersContext);
 
   useEffect(() => {
-    setPlayers(initialPlayers);
+    if (!players) {
+      try {
+        refreshPlayers();
+      } catch (err) {
+        console.error(err);
+      }
+    }
   }, []);
 
   useEffect(() => {
@@ -121,11 +144,45 @@ const Team = ({
                   )}
               </div>
             </div>
+            <div className="py-2 px-4 mt-3">
+              <div className="flex items-center justify-between mt-3 pb-2">
+                <TeamButton
+                  variant="all"
+                  selected={team === "all"}
+                  onClick={() => setTeam("all")}
+                >
+                  All
+                </TeamButton>
+                <TeamButton
+                  variant="silver"
+                  selected={team === "silver"}
+                  onClick={() => setTeam("silver")}
+                >
+                  Silver
+                </TeamButton>
+                <TeamButton
+                  variant="bronze"
+                  selected={team === "bronze"}
+                  onClick={() => setTeam("bronze")}
+                >
+                  Bronze
+                </TeamButton>
+              </div>
+            </div>
             {players && (
               <ul>
-                {players.map((player) => (
-                  <Player key={player.id} player={player} expand={expand} />
-                ))}
+                {players.map((player) => {
+                  console.log(player);
+                  if (
+                    team !== "all" &&
+                    team !== player.fields.team.toLowerCase()
+                  ) {
+                    return null;
+                  }
+                  return (
+                    <Player key={player.id} player={player} expand={expand} />
+                  );
+                })}
               </ul>
             )}
           </>
@@ -138,35 +195,4 @@ const Team = ({
 
 export default Team;
 
-export const getServerSideProps = withPageAuthRequired({
-  async getServerSideProps() {
-    try {
-      const players = await table
-        .select({ sort: [{ field: "rating", direction: "desc" }] })
-        .firstPage();
-      const minifiedPlayers = minifyRecords(players);
-      for (const player of minifiedPlayers) {
-        if (player?.fields?.player_stats?.[0]) {
-          const player_stats_id: string = player.fields.player_stats[0];
-          const stats_record = await table.find(player_stats_id);
-          player.stats = {
-            id: stats_record.id,
-            fields: stats_record.fields,
-          };
-        }
-      }
-      return {
-        props: {
-          initialPlayers: minifyRecords(minifiedPlayers),
-        },
-      };
-    } catch (err) {
-      console.error(err);
-      return {
-        props: {
-          err: "Something went wrong",
-        },
-      };
-    }
-  },
-});
+export const getServerSideProps = withPageAuthRequired();

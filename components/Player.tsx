@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 import { Player as PlayerType } from "../pages/api/utils/Airtable";
 import { hasRole } from "./utils";
@@ -146,6 +147,21 @@ const Player = ({
               <strong>Goals</strong> {player.stats?.fields?.goals}
             </div>
           </div>
+          {user &&
+            hasRole(
+              user["https://www.sescwolves.club/roles"] as string[],
+              "Coach"
+            ) && (
+              <div className="mt-4">
+                <p className="flex items-center justify-around">
+                  <Link href={`/players/edit/${player.id}`}>
+                    <a className="w-full rounded bg-blue-800 text-white py-2 px-10 flex items-center justify-center">
+                      Edit
+                    </a>
+                  </Link>
+                </p>
+              </div>
+            )}
         </div>
       )}
     </li>

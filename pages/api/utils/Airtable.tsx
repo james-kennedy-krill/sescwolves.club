@@ -37,7 +37,7 @@ const statsTable = base(
   process.env.AIRTABLE_STATS_TABLE_NAME || "player_stats"
 );
 
-const getMinifiedRecord = (record: Player): Player => {
+const getMinifiedRecord = (record: any) => {
   return {
     id: record.id,
     fields: record.fields,
