@@ -175,7 +175,7 @@ const Team = ({
                   console.log(player);
                   if (
                     team !== "all" &&
-                    team !== player.fields.team.toLowerCase()
+                    team !== player?.fields?.team?.toLowerCase()
                   ) {
                     return null;
                   }
