@@ -86,14 +86,14 @@ const Player = ({
               <strong className="text-xl"> Player Stats 2021-2022</strong>
             </div>
             {/* ------ ROW ------ */}
-            <div className="bg-indigo-100 p-2 rounded col-start-1 col-span-3">
+            {/* <div className="bg-indigo-100 p-2 rounded col-start-1 col-span-3">
               <strong>Assists</strong> {player.stats?.fields?.assists}
             </div>
             <div className="bg-indigo-100 p-2 rounded col-start-4 col-span-2 row-span-2">
               <strong>Goals</strong> {player.stats?.fields?.goals}
-            </div>
-            <div className="flex flex-col col-start-6 col-span-3 row-span-2 p-2 border-2 border-indigo-100">
-              <div className="flex items-center justify-between">
+            </div> */}
+            <div className="flex flex-col col-start-1 col-span-8 row-span-2 p-2 border-2 border-indigo-100">
+              <div className="flex items-center justify-between mb-2">
                 <strong>Rating</strong>
                 <span
                   className={`flex-1 h-0.5 bg-${
@@ -122,6 +122,9 @@ const Player = ({
                   >
                     <div className="w-full text-center text-xs font-bold">
                       {stat.substr(0, 1).toUpperCase()}
+                      <span className="hidden md:inline-block">
+                        {stat.substr(1).toUpperCase()}
+                      </span>
                     </div>
                     {[...Array(player.fields[stat])].map(
                       (
@@ -141,11 +144,11 @@ const Player = ({
               </div>
             </div>
             {/* ------ ROW ------ */}
-            <div className="bg-green-100 p-2 rounded col-start-1 col-span-3">
+            {/* <div className="bg-green-100 p-2 rounded col-start-1 col-span-3">
               <span className="material-icons text-4xl">sports_soccer</span>
               <br />
               <strong>Goals</strong> {player.stats?.fields?.goals}
-            </div>
+            </div> */}
           </div>
           {user &&
             hasRole(
