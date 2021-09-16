@@ -8,6 +8,7 @@ export default [
         field: "8sm",
         homeOrAway: "away",
         opponent: "pcu red 1",
+        result: "L 2-4",
       },
       {
         team: "B",
@@ -15,6 +16,7 @@ export default [
         field: "8sm",
         homeOrAway: "home",
         opponent: "united pdx blue",
+        result: "W 9-0",
       },
     ],
   },

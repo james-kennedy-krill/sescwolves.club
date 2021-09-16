@@ -17,6 +17,7 @@ type Game = {
   field: string;
   homeOrAway: string;
   opponent: string;
+  result: string;
 };
 
 type Schedule = {
@@ -69,6 +70,7 @@ const Schedule = () => {
                   <TableHeader>Field</TableHeader>
                   <TableHeader>Home/Away</TableHeader>
                   <TableHeader>Opponent</TableHeader>
+                  <TableHeader>Result</TableHeader>
                 </tr>
               </thead>
               <tbody>
@@ -77,6 +79,7 @@ const Schedule = () => {
                     <>
                       <TableDateRow key={date.date}>
                         <TableHeader>{date.date}</TableHeader>
+                        <TableData></TableData>
                         <TableData></TableData>
                         <TableData></TableData>
                         <TableData></TableData>
@@ -91,6 +94,7 @@ const Schedule = () => {
                           <TableData>{game.field}</TableData>
                           <TableData>{game.homeOrAway}</TableData>
                           <TableData>{game.opponent}</TableData>
+                          <TableData>{game.result}</TableData>
                         </tr>
                       ))}
                     </>
