@@ -29,6 +29,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "saints blue",
+        result: "W 12-0",
       },
       {
         team: "B",
@@ -36,6 +37,7 @@ export default [
         field: "8sm",
         homeOrAway: "away",
         opponent: "pcu red 3",
+        result: "W 13-0",
       },
     ],
   },
