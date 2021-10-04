@@ -119,7 +119,8 @@ const Schedule = () => {
                   </Link>
                 </span>
                 <span className="text-gray-900 italic font-bold">
-                  6:00pm - 7:30pm
+                  <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
+                  7:00pm
                 </span>
               </p>
               <p className="grid grid-cols-6 items-center justify-between mb-3">
@@ -183,7 +184,10 @@ const Schedule = () => {
                     </a>
                   </Link>
                 </span>
-                <span className="text-gray-900 font-bold">6:00pm - 7:30pm</span>
+                <span className="text-gray-900 font-bold">
+                  <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
+                  7:00pm
+                </span>
               </p>
               <p className="grid grid-cols-6 items-center justify-between mb-3">
                 <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
