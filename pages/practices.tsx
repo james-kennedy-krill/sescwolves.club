@@ -50,7 +50,8 @@ const Practices = () => {
                   feet still.
                 </li>
                 <li>
-                  We will not throw balls around or kick other people's balls
+                  We will not throw balls around or kick other people&apos;s
+                  balls
                 </li>
                 <li>
                   No being mean when teammates make mistakes. We will be
@@ -68,8 +69,8 @@ const Practices = () => {
                   everyone and play as a team.
                 </li>
                 <li>
-                  We will play with the soccer ball the way it's supposed to be
-                  used.
+                  We will play with the soccer ball the way it&apos;s supposed
+                  to be used.
                 </li>
                 <li>We will stay positive. No negative comments.</li>
                 <li>
