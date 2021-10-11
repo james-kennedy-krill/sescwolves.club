@@ -92,6 +92,7 @@ export default [
         field: "8sm",
         homeOrAway: "home",
         opponent: "Lys red",
+        result: "W 3-2",
       },
       {
         team: "B",
@@ -99,6 +100,7 @@ export default [
         field: "8sm",
         homeOrAway: "home",
         opponent: "cusc lady rangers",
+        result: "W 4-3",
       },
     ],
   },
