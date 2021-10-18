@@ -71,7 +71,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "pacific fc chaos",
-        result: "W 6-2"
+        result: "W 6-2",
       },
       {
         team: "B",
@@ -79,7 +79,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "fcsc blue",
-        result: "T 1-1"
+        result: "T 1-1",
       },
     ],
   },
@@ -113,6 +113,7 @@ export default [
         field: "7sm",
         homeOrAway: "home",
         opponent: "pacific fc fuego",
+        result: "L 0-3",
       },
       {
         team: "B",
@@ -120,6 +121,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "united pdx blue",
+        result: "W 5-1",
       },
     ],
   },
