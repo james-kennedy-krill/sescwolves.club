@@ -134,6 +134,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "lys black",
+        result: "W 5-1",
       },
       {
         team: "B",
@@ -141,6 +142,7 @@ export default [
         field: "8sm",
         homeOrAway: "away",
         opponent: "wa timbers predator 3",
+        result: "? Hail",
       },
     ],
   },
