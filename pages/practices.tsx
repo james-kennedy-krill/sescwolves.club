@@ -98,7 +98,7 @@ const Practices = () => {
                 </span>
                 <span className="text-gray-900 italic font-bold">
                   <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
-                  7:00pm
+                  6:30pm
                 </span>
               </p>
               <p className="grid grid-cols-6 items-center justify-between mb-3">
@@ -164,7 +164,7 @@ const Practices = () => {
                 </span>
                 <span className="text-gray-900 font-bold">
                   <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
-                  7:00pm
+                  6:30pm
                 </span>
               </p>
               <p className="grid grid-cols-6 items-center justify-between mb-3">
