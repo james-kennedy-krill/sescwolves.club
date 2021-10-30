@@ -25,7 +25,9 @@ const Futsal = () => {
             <ul className="list-disc ml-8">
               <li className="list-item">
                 <Link href="https://rosecityfutsal.com/knowledge-base/5-v-5-futsal-rules/">
-                  <a className="font-bold underline">Futsal Rules</a>
+                  <a className="font-bold underline" target="_blank">
+                    Futsal Rules
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -46,7 +48,10 @@ const Futsal = () => {
               <Image src="/futsal-shoe-1.jpg" width="300" height="300" />
               <br />
               <Link href="https://www.adidas.com/us/predator-freak.3-indoor-shoes/FY1033.html">
-                <a className="underline italic text-sm text-gray-600">
+                <a
+                  className="underline italic text-sm text-gray-600"
+                  target="_blank"
+                >
                   Adidas Predator Freak.3 Indoor Shoes
                 </a>
               </Link>
