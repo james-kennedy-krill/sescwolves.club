@@ -52,7 +52,11 @@ const Navbar = (): JSX.Element => {
       </Link>
       <Link href="/">
         <a className="pl-24 font-lato text-2xl font-bold text-gray-800 hidden lg:block">
-          Wolves - SouthEast Soccer Club (SESC) U10 Girls
+          <span>SESC Wolves</span>
+          <span className="hidden xl:inline">
+            {" "}
+            - SouthEast Soccer Club U10 Girls
+          </span>
         </a>
       </Link>
       <button
@@ -113,6 +117,14 @@ const Navbar = (): JSX.Element => {
                   className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Tournaments
+                </a>
+              </Link>
+              <Link href="/futsal">
+                <a
+                  onClick={() => setMenuOpen(false)}
+                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
+                >
+                  Futsal
                 </a>
               </Link>
             </>
