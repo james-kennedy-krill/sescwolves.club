@@ -40,17 +40,24 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
                   <span>U10 Wolves have two teams: Bronze and Silver</span>
                 </NavButton>
               </Link>
-              <Link href="/schedule">
-                <NavButton>
-                  Schedule
-                  <span>Game and Practice schedules for both teams</span>
-                </NavButton>
-              </Link>
               <Link href="/futsal">
                 <NavButton>
                   Futsal <span>Winter 2021/2022 Futsal Information</span>
                 </NavButton>
               </Link>
+              <Link href="/schedule">
+                <NavButton>
+                  Games
+                  <span>Game schedules for both teams</span>
+                </NavButton>
+              </Link>
+              <Link href="/practices">
+                <NavButton>
+                  Practices
+                  <span>Practice schedules for both teams</span>
+                </NavButton>
+              </Link>
+
               <Link href="/tournaments">
                 <NavButton>
                   Tournaments<span>Schedule, Results, Photos and more</span>
