@@ -46,6 +46,11 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
                   <span>Game and Practice schedules for both teams</span>
                 </NavButton>
               </Link>
+              <Link href="/futsal">
+                <NavButton>
+                  Futsal <span>Winter 2021/2022 Futsal Information</span>
+                </NavButton>
+              </Link>
               <Link href="/tournaments">
                 <NavButton>
                   Tournaments<span>Schedule, Results, Photos and more</span>

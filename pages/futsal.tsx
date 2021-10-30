@@ -20,7 +20,7 @@ const Futsal = () => {
             <p>
               More information to come.
               <br />
-              For now here are some links to Rose City Futsal's site.
+              For now here are some links to Rose City Futsal&apos;s site.
             </p>
             <ul className="list-disc ml-8">
               <li className="list-item">
