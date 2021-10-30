@@ -126,13 +126,13 @@ const Practices = () => {
                 <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 4
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 11
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 18
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 25
                 </span>
                 <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
@@ -192,13 +192,13 @@ const Practices = () => {
                 <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 6
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 13
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 20
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 27
                 </span>
                 <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
