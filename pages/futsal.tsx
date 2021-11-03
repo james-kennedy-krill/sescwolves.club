@@ -80,6 +80,10 @@ const Futsal = () => {
                 </a>
               </Link>
             </P>
+            <P>
+              Dick's has indoor shoes in stock, Lake Oswego store has the most
+              available.
+            </P>
             <h2 className="text-xl md:text-2xl font-bold mt-8">Teams</h2>
             <P>
               We will have two teams:{" "}
