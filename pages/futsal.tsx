@@ -100,7 +100,7 @@ const Futsal = () => {
                   <li className="list-item">Olivia*</li>
                   <li className="list-item">Isa</li>
                   <li className="list-item">Sidney</li>
-                  <li className="list-item">Megan*</li>
+                  <li className="list-item">Megan</li>
                   <li className="list-item">Amara</li>
                   <li className="list-item">Camille</li>
                   <li className="list-item">Nora B.</li>
@@ -114,7 +114,7 @@ const Futsal = () => {
                   <li className="list-item">Nola</li>
                   <li className="list-item">Clara</li>
                   <li className="list-item">Lucia</li>
-                  <li className="list-item">Megan*</li>
+                  <li className="list-item">Mazzie</li>
                   <li className="list-item">Olivia*</li>
                   <li className="list-item">Etta</li>
                 </TeamList>
