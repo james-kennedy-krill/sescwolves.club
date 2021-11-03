@@ -96,7 +96,7 @@ const Futsal = () => {
             </P>
             <div className="flex w-full">
               <div className="flex-1">
-                <h2 className="text-yellow-500 font-bold text-4xl">GOLD</h2>
+                <h2 className="text-blue-700 font-bold text-4xl">BLUE</h2>
                 <TeamList>
                   <li className="list-item">Jozy</li>
                   <li className="list-item">Olivia*</li>
@@ -109,7 +109,9 @@ const Futsal = () => {
                 </TeamList>
               </div>
               <div className="flex-1">
-                <h2 className="text-gray-500 font-bold text-4xl">SILVER</h2>
+                <h2 className="text-white bg-black inline-block font-bold text-4xl">
+                  WHITE
+                </h2>
                 <TeamList>
                   <li className="list-item">Skye</li>
                   <li className="list-item">Sylvia</li>
