@@ -84,7 +84,7 @@ const Futsal = () => {
             <P>
               We will have two teams:{" "}
               <span className="text-blue-700 font-bold">BLUE</span> and{" "}
-              <span className="text-white bg-black inline-block font-bold">
+              <span className="text-white bg-black inline-block px-1 font-bold">
                 WHITE
               </span>
               .
@@ -109,7 +109,7 @@ const Futsal = () => {
                 </TeamList>
               </div>
               <div className="flex-1">
-                <h2 className="text-white bg-black inline-block font-bold text-4xl">
+                <h2 className="text-white bg-black inline-block px-1 font-bold text-4xl">
                   WHITE
                 </h2>
                 <TeamList>
