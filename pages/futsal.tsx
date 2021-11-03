@@ -82,10 +82,12 @@ const Futsal = () => {
             </P>
             <h2 className="text-xl md:text-2xl font-bold mt-8">Teams</h2>
             <P>
-              We will have two teams: one in the{" "}
-              <span className="text-yellow-500 font-bold">GOLD</span> division
-              and one in the{" "}
-              <span className="text-gray-500 font-bold">SILVER</span> division.
+              We will have two teams:{" "}
+              <span className="text-blue-700 font-bold">BLUE</span> and{" "}
+              <span className="text-white bg-black inline-block font-bold">
+                WHITE
+              </span>
+              .
             </P>
             <P>
               Players will be assigned to a specific team but there might be
