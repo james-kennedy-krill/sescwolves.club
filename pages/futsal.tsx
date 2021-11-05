@@ -1,13 +1,46 @@
+import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { GetServerSideProps } from "next";
+import useSWR from "swr";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import tw from "twin.macro";
 import { Container } from "../styles/common-styles";
 
+type Game = {
+  team: string;
+  time: string;
+  field: string;
+  homeOrAway: string;
+  opponent: string;
+  result: string;
+};
+
+type Schedule = {
+  date: string;
+  games: Game[];
+};
+
 const P = tw.p`mb-2`;
 const TeamList = tw.ol`list-decimal ml-6`;
+const Table = tw.table`w-full border-collapse`;
+const TableHeader = tw.th`font-bold text-xs md:text-lg text-left p-1 md:p-2`;
+const TableDateRow = tw.tr`text-sm md:text-base border-b-2 border-gray-300 bg-gray-100`;
+const TableData = tw.td`text-xs md:text-base pt-1 pb-2 px-1 md:px-2 text-left`;
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Futsal = () => {
+  const { user, error, isLoading } = useUser();
+
+  const { data: schedule, error: fetchError } = useSWR<Schedule[], any>(
+    "/api/getFutsalSchedule",
+    fetcher
+  );
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+
   return (
     <div>
       <Head>
@@ -23,7 +56,11 @@ const Futsal = () => {
             Nov 6th-Jan 9th
           </h2>
           <div>
-            <P className="italic text-center mb-2">More information to come.</P>
+            <P className="italic text-center mb-2">
+              <Link href="#schedule">
+                <a className="underline font-bold">Schedule</a>
+              </Link>
+            </P>
             <P>For now here are some links to Rose City Futsal&apos;s site.</P>
             <ul className="list-disc ml-8">
               <li className="list-item">
@@ -131,8 +168,47 @@ const Futsal = () => {
             <P className="text-sm mt-4 italic border-t-2 border-gray-200">
               * will play on both teams as needed.
             </P>
-            <h2 className="text-xl md:text-2xl font-bold mt-8">Schedule</h2>
-            <P>Coming Soon!</P>
+            <h2 id="schedule" className="text-xl md:text-2xl font-bold mt-8">
+              Schedule
+            </h2>
+            <Table tw="mt-5">
+              <thead>
+                <tr>
+                  <TableHeader>Date/Team</TableHeader>
+                  <TableHeader>Time</TableHeader>
+                  <TableHeader>Field</TableHeader>
+                  <TableHeader>Home/Away</TableHeader>
+                  <TableHeader>Opponent</TableHeader>
+                  <TableHeader>Result</TableHeader>
+                </tr>
+              </thead>
+              <tbody>
+                {schedule &&
+                  schedule.map((date: { date: string; games: Game[] }) => (
+                    <>
+                      <TableDateRow key={date.date}>
+                        <TableHeader colSpan={2}>{date.date}</TableHeader>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                      </TableDateRow>
+                      {date.games.map((game: Game) => (
+                        <tr
+                          key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
+                        >
+                          <TableData>{game.team}</TableData>
+                          <TableData>{game.time}</TableData>
+                          <TableData>{game.field}</TableData>
+                          <TableData>{game.homeOrAway}</TableData>
+                          <TableData>{game.opponent}</TableData>
+                          <TableData>{game.result}</TableData>
+                        </tr>
+                      ))}
+                    </>
+                  ))}
+              </tbody>
+            </Table>
           </div>
         </div>
       </Container>
@@ -141,3 +217,5 @@ const Futsal = () => {
 };
 
 export default Futsal;
+
+export const getServerSideProps: GetServerSideProps = withPageAuthRequired();
