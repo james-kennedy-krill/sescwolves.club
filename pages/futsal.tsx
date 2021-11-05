@@ -64,6 +64,14 @@ const Futsal = () => {
             <P>For now here are some links to Rose City Futsal&apos;s site.</P>
             <ul className="list-disc ml-8">
               <li className="list-item">
+                <Link href="https://rosecityfutsal.com/about/locations/">
+                  <a className="underline font-bold" target="_blank">
+                    Locations/Directions
+                  </a>
+                </Link>{" "}
+                - please check here for directions to EAST and WEST locations.
+              </li>
+              <li className="list-item">
                 <Link href="https://rosecityfutsal.com/knowledge-base/5-v-5-futsal-rules/">
                   <a className="font-bold underline" target="_blank">
                     Futsal Rules
