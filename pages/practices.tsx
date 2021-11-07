@@ -36,7 +36,7 @@ const Practices = () => {
             Practices
           </h1>
           <hr />
-          <p className="italic mb-2">
+          <p className="italic mb-2 text-center">
             Practices are done until Spring! We will update this page in the
             Spring.
           </p>
