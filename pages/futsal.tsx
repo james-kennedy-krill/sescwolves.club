@@ -148,7 +148,7 @@ const Futsal = () => {
                 <h2 className="text-blue-700 font-bold text-4xl">BLUE</h2>
                 <TeamList>
                   <li className="list-item">Jozy</li>
-                  <li className="list-item">Olivia*</li>
+                  <li className="list-item">Olivia</li>
                   <li className="list-item">Isa</li>
                   <li className="list-item">Sidney</li>
                   <li className="list-item">Megan</li>
@@ -168,14 +168,11 @@ const Futsal = () => {
                   <li className="list-item">Clara</li>
                   <li className="list-item">Lucia</li>
                   <li className="list-item">Mazzie</li>
-                  <li className="list-item">Olivia*</li>
+                  <li className="list-item">Milly</li>
                   <li className="list-item">Etta</li>
                 </TeamList>
               </div>
             </div>
-            <P className="text-sm mt-4 italic border-t-2 border-gray-200">
-              * will play on both teams as needed.
-            </P>
             <h2 id="schedule" className="text-xl md:text-2xl font-bold mt-8">
               Schedule
             </h2>
