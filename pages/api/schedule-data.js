@@ -155,6 +155,7 @@ export default [
         field: "7sm",
         homeOrAway: "away",
         opponent: "fc piamonte genesis",
+        result: "W 6-0",
       },
     ],
   },

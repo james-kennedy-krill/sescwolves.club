@@ -36,6 +36,11 @@ const Practices = () => {
             Practices
           </h1>
           <hr />
+          <p className="italic mb-2">
+            Practices are done until Spring! We will update this page in the
+            Spring.
+          </p>
+          <hr />
           <div id="fall-practices" className="my-5 py-5">
             <div className="p-10 pt-0">
               <h2 className="text-2xl font-bold mb-2">Practice Rules</h2>
@@ -135,7 +140,7 @@ const Practices = () => {
                 <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 25
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Nov. 1
                 </span>
               </p>
@@ -201,7 +206,7 @@ const Practices = () => {
                 <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Oct. 27
                 </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
                   Nov. 3
                 </span>
               </p>
