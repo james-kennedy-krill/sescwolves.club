@@ -8,7 +8,7 @@ export default [
         field: "RCF West - Buenos Aires",
         homeOrAway: "home",
         opponent: "United PDX 2012 Black",
-        result: "",
+        result: "W 10-5",
       },
     ],
   },
