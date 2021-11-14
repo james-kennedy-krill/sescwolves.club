@@ -9,6 +9,8 @@ export default [
         homeOrAway: "home",
         opponent: "United PDX 2012 Black",
         result: "W 10-5",
+        notes:
+          "Goals from: Sidney (4), Camille (3), Jozy (2), Etta (1). Goalies: Olivia & Sidney.",
       },
     ],
   },
