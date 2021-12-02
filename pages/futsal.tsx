@@ -105,6 +105,77 @@ const Futsal = () => {
                 </Link>
               </li>
             </ul>
+            <h2 id="schedule" className="text-xl md:text-2xl font-bold mt-8">
+              Schedule
+            </h2>
+            <p tw="mt-2">
+              <strong>RCF West</strong> -{" "}
+              <Link href="https://maps.google.com/maps?ll=45.440828,-122.781705&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=3329731263541845162">
+                <a target="_blank" className="underline">
+                  10831 SW Cascade Ave. Tigard, OR 97223
+                </a>
+              </Link>
+            </p>
+            <p tw="mt-1">
+              <strong>RCF East</strong> -{" "}
+              <Link href="https://maps.google.com/maps?ll=45.528941,-122.611831&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9811445618550201241">
+                <a target="_blank" className="underline">
+                  5010 NE Oregon St. Portland, OR 97213
+                </a>
+              </Link>
+            </p>
+            <Table tw="mt-5">
+              <thead>
+                <tr>
+                  <TableHeader>Team</TableHeader>
+                  <TableHeader>Time</TableHeader>
+                  <TableHeader>Location</TableHeader>
+                  <TableHeader>H/A</TableHeader>
+                  <TableHeader>Opponent</TableHeader>
+                  <TableHeader>Result</TableHeader>
+                </tr>
+              </thead>
+              <tbody>
+                {schedule &&
+                  schedule.map((date: { date: string; games: Game[] }) => (
+                    <>
+                      <TableDateRow key={date.date}>
+                        <TableHeader colSpan={2}>{date.date}</TableHeader>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                        <TableData></TableData>
+                      </TableDateRow>
+                      {date.games.map((game: Game) => (
+                        <>
+                          <tr
+                            key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
+                          >
+                            <TableData>{game.team}</TableData>
+                            <TableData>{game.time}</TableData>
+                            <TableData>{game.field}</TableData>
+                            <TableData>{game.homeOrAway}</TableData>
+                            <TableData>{game.opponent}</TableData>
+                            <TableData>{game.result}</TableData>
+                          </tr>
+                          {game.notes && (
+                            <tr>
+                              <TableDataNotes colSpan={6}>
+                                <p tw="flex items-center">
+                                  <span className="material-icons pr-2">
+                                    sports_soccer
+                                  </span>
+                                  {game.notes}
+                                </p>
+                              </TableDataNotes>
+                            </tr>
+                          )}
+                        </>
+                      ))}
+                    </>
+                  ))}
+              </tbody>
+            </Table>
             <h2 className="text-xl md:text-2xl font-bold mt-8">Equipment</h2>
             <P>
               Players need their usual gear, except cleats. Instead of cleats
@@ -178,77 +249,6 @@ const Futsal = () => {
                 </TeamList>
               </div>
             </div>
-            <h2 id="schedule" className="text-xl md:text-2xl font-bold mt-8">
-              Schedule
-            </h2>
-            <p tw="mt-2">
-              <strong>RCF West</strong> -{" "}
-              <Link href="https://maps.google.com/maps?ll=45.440828,-122.781705&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=3329731263541845162">
-                <a target="_blank" className="underline">
-                  10831 SW Cascade Ave. Tigard, OR 97223
-                </a>
-              </Link>
-            </p>
-            <p tw="mt-1">
-              <strong>RCF East</strong> -{" "}
-              <Link href="https://maps.google.com/maps?ll=45.528941,-122.611831&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9811445618550201241">
-                <a target="_blank" className="underline">
-                  5010 NE Oregon St. Portland, OR 97213
-                </a>
-              </Link>
-            </p>
-            <Table tw="mt-5">
-              <thead>
-                <tr>
-                  <TableHeader>Team</TableHeader>
-                  <TableHeader>Time</TableHeader>
-                  <TableHeader>Location</TableHeader>
-                  <TableHeader>H/A</TableHeader>
-                  <TableHeader>Opponent</TableHeader>
-                  <TableHeader>Result</TableHeader>
-                </tr>
-              </thead>
-              <tbody>
-                {schedule &&
-                  schedule.map((date: { date: string; games: Game[] }) => (
-                    <>
-                      <TableDateRow key={date.date}>
-                        <TableHeader colSpan={2}>{date.date}</TableHeader>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                        <TableData></TableData>
-                      </TableDateRow>
-                      {date.games.map((game: Game) => (
-                        <>
-                          <tr
-                            key={`${game.team}-${game.homeOrAway}-${game.opponent}`}
-                          >
-                            <TableData>{game.team}</TableData>
-                            <TableData>{game.time}</TableData>
-                            <TableData>{game.field}</TableData>
-                            <TableData>{game.homeOrAway}</TableData>
-                            <TableData>{game.opponent}</TableData>
-                            <TableData>{game.result}</TableData>
-                          </tr>
-                          {game.notes && (
-                            <tr>
-                              <TableDataNotes colSpan={6}>
-                                <p tw="flex items-center">
-                                  <span className="material-icons pr-2">
-                                    sports_soccer
-                                  </span>
-                                  {game.notes}
-                                </p>
-                              </TableDataNotes>
-                            </tr>
-                          )}
-                        </>
-                      ))}
-                    </>
-                  ))}
-              </tbody>
-            </Table>
           </div>
         </div>
       </Container>
