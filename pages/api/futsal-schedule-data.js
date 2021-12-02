@@ -23,7 +23,7 @@ export default [
         field: "RCF East - Rio",
         homeOrAway: "away",
         opponent: "SCA Feets of Fury",
-        result: "",
+        result: "L 6-8",
       },
       {
         team: "White",
@@ -31,7 +31,7 @@ export default [
         field: "RCF East - Rio",
         homeOrAway: "away",
         opponent: "NW Elite FC 11G Black",
-        result: "",
+        result: "L 1-8",
       },
     ],
   },
@@ -44,7 +44,8 @@ export default [
         field: "RCF West - Buenos Aires",
         homeOrAway: "away",
         opponent: "LYS Fire",
-        result: "",
+        result: "W 4-2",
+        notes: "Goals from: Camille (3), Sidney (1). Goalies: Etta & Olivia.",
       },
       {
         team: "White",
