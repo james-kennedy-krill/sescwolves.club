@@ -96,7 +96,7 @@ export default [
         field: "RCF East - Barcelona",
         homeOrAway: "home",
         opponent: "SESC Wolves Blue",
-        result: "",
+        result: "Scrimmage",
       },
       {
         team: "Blue",
@@ -104,7 +104,7 @@ export default [
         field: "RCF East - Barcelona",
         homeOrAway: "away",
         opponent: "SESC Wolves White",
-        result: "",
+        result: "Scrimmage",
       },
     ],
   },
