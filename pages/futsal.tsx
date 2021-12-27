@@ -231,6 +231,7 @@ const Futsal = () => {
                   <li className="list-item">Amara</li>
                   <li className="list-item">Camille</li>
                   <li className="list-item">Nora B.</li>
+                  <li className="list-item">Etta</li>
                 </TeamList>
               </div>
               <div className="flex-1">
@@ -246,6 +247,7 @@ const Futsal = () => {
                   <li className="list-item">Mazzie</li>
                   <li className="list-item">Milly</li>
                   <li className="list-item">Etta</li>
+                  <li className="list-item">Olivia</li>
                 </TeamList>
               </div>
             </div>
