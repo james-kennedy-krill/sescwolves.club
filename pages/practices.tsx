@@ -8,8 +8,7 @@ import tw from "twin.macro";
 import Navbar from "../components/Navbar";
 import { hasRole } from "../components/utils";
 import { Container } from "../styles/common-styles";
-import lentspark from "../public/lentspark.png";
-import brentwoodpark from "../public/brentwoodpark.png";
+import lasalle from "../public/lasalle.png";
 
 const Table = tw.table`w-full border-collapse`;
 const TableHeader = tw.th`font-bold text-xs md:text-lg text-left p-1 md:p-2`;
@@ -37,8 +36,8 @@ const Practices = () => {
           </h1>
           <hr />
           <p className="italic mb-2 text-center">
-            Practices are done until Spring! We will update this page in the
-            Spring.
+            Spring practices are here @ La Salle High School on Mondays and
+            Wednesdays, 6:30 - 8:00pm!
           </p>
           <hr />
           <div id="fall-practices" className="my-5 py-5">
@@ -86,133 +85,54 @@ const Practices = () => {
             </div>
 
             <h2 className="text-3xl font-bold mb-2 text-center">
-              Fall 2021 Practices
+              Spring 2022 Practices
             </h2>
 
-            <p className="text-center italic">August 16th - November 4th</p>
+            <p className="text-center italic">January 31 - February 23rd</p>
 
             <div className="mb-6">
-              <h3 className="text-2xl font-bold">Mondays</h3>
+              <h3 className="text-2xl font-bold">Mondays &amp; Wednesdays</h3>
               <p className="mb-1 flex items-start justify-between">
                 <span>
-                  <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
+                  <Link href="https://www.google.com/maps/dir//La+Salle+Catholic+College+Preparatory,+11999+SE+Fuller+Rd,+Milwaukie,+OR+97222/@45.4359654,-122.589035,640m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x54957573ec110af5:0x4697b8d2aab1b85f!2m2!1d-122.5869643!2d45.4365526!3e0">
                     <a className="text-blue-600 underline" target="_blank">
-                      <strong>Brentwood Field #3</strong>
+                      <strong>La Salle</strong>
                     </a>
                   </Link>
                 </span>
                 <span className="text-gray-900 italic font-bold">
-                  <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
-                  6:30pm
+                  6:30pm - 8:00pm
                 </span>
               </p>
               <p className="grid grid-cols-6 items-center justify-between mb-3">
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Aug. 16
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Jan. 31
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Aug. 23
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb 2
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Aug. 30
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 7
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 6
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 9
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 13
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 14
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 20
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 16
                 </span>
-                <span className="line-through col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 27
+                <span className="col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 21
                 </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 4
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 11
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 18
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 25
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Nov. 1
+                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
+                  Feb. 23
                 </span>
               </p>
-              <Link href="https://goo.gl/maps/iDULNdYBPjiDPJv16">
+              <Link href="https://www.google.com/maps/dir//La+Salle+Catholic+College+Preparatory,+11999+SE+Fuller+Rd,+Milwaukie,+OR+97222/@45.4359654,-122.589035,640m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x54957573ec110af5:0x4697b8d2aab1b85f!2m2!1d-122.5869643!2d45.4365526!3e0">
                 <a target="_blank">
-                  <Image
-                    src={brentwoodpark}
-                    alt="satallite of Brentwood Park"
-                  />
-                </a>
-              </Link>
-              <p className="text-gray-500 text-sm italic">
-                Click image for directions
-              </p>
-            </div>
-
-            <div className="mb-4">
-              <h3 className="text-2xl font-bold">Wednesdays</h3>
-              <p className="mb-1 flex items-start justify-between">
-                <span>
-                  <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
-                    <a className="text-blue-600 underline" target="_blank">
-                      <strong>Lent&apos;s Park (turf)</strong>
-                    </a>
-                  </Link>
-                </span>
-                <span className="text-gray-900 font-bold">
-                  <span className="line-through">6:00pm - 7:30pm</span> 5:30pm -
-                  6:30pm
-                </span>
-              </p>
-              <p className="grid grid-cols-6 items-center justify-between mb-3">
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Aug. 18
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Aug. 25
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 1
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 8
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 15
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 22
-                </span>
-                <span className="line-through col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Sept. 29
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 6
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 13
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 20
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Oct. 27
-                </span>
-                <span className="line-through py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Nov. 3
-                </span>
-              </p>
-              <Link href="https://goo.gl/maps/gH9oAzht54sdowdm6">
-                <a target="_blank">
-                  <Image src={lentspark} />
+                  <Image src={lasalle} alt="satallite of La Salle" />
                 </a>
               </Link>
               <p className="text-gray-500 text-sm italic">
