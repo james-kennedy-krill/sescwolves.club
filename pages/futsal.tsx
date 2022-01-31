@@ -57,6 +57,17 @@ const Futsal = () => {
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-1">
             Winter Futsal Information
           </h1>
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+              FINAL RESULTS
+            </h2>
+            <Image
+              src="/futsal-results.png"
+              alt="Futsal Results"
+              width="936"
+              height="432"
+            />
+          </div>
           <h2 className="text-xl md:text-2xl font-bold text-center mb-2">
             Nov 6th-Jan 9th
           </h2>
