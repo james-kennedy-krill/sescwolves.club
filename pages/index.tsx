@@ -36,15 +36,15 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
             <div className="flex flex-col space-y-4">
               <Link href="/team">
                 <NavButton>
-                  Team Roster{" "}
-                  <span>U10 Wolves have two teams: Bronze and Silver</span>
+                  Team Roster <span>U10 Wolves have two teams:</span>
+                  <span> Blue (Gold) and White (Bronze)</span>
                 </NavButton>
               </Link>
-              <Link href="/futsal">
+              {/* <Link href="/futsal">
                 <NavButton>
                   Futsal <span>Winter 2021/2022 Futsal Information</span>
                 </NavButton>
-              </Link>
+              </Link> */}
               <Link href="/schedule">
                 <NavButton>
                   Games

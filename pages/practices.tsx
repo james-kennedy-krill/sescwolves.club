@@ -104,32 +104,7 @@ const Practices = () => {
                   6:30pm - 8:00pm
                 </span>
               </p>
-              <p className="grid grid-cols-6 items-center justify-between mb-3">
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Jan. 31
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb 2
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 7
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 9
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 14
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 16
-                </span>
-                <span className="col-start-1 py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 21
-                </span>
-                <span className="py-1 px-2 text-center bg-gray-200 border-2 border-gray-500 w-full">
-                  Feb. 23
-                </span>
-              </p>
+
               <Link href="https://www.google.com/maps/dir//La+Salle+Catholic+College+Preparatory,+11999+SE+Fuller+Rd,+Milwaukie,+OR+97222/@45.4359654,-122.589035,640m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x54957573ec110af5:0x4697b8d2aab1b85f!2m2!1d-122.5869643!2d45.4365526!3e0">
                 <a target="_blank">
                   <Image src={lasalle} alt="satallite of La Salle" />

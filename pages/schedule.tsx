@@ -57,18 +57,24 @@ const Schedule = () => {
           <hr />
           <div id="fall-season" className="my-5 py-5">
             <h2 tw="text-xl md:text-2xl font-bold text-center">
-              Fall 2021 Season Schedule
+              Spring 2022 Season Schedule
             </h2>
             <h3 tw="text-lg md:text-xl font-bold text-center">
-              Silver (S) and Bronze (B)
+              Gold/Blue (G) and Bronze/White (B)
             </h3>
+            <h4 tw="text-sm text-center italic">All games at Delta Park.</h4>
+            <h4 tw="mt-2 text-center text-xs">
+              <strong>Home:</strong> Gray Jersey
+              <br />
+              <strong>Away:</strong> Blue Jersey
+            </h4>
             <Table tw="mt-5">
               <thead>
                 <tr>
-                  <TableHeader>Date/Team</TableHeader>
+                  <TableHeader>Team</TableHeader>
                   <TableHeader>Time</TableHeader>
                   <TableHeader>Field</TableHeader>
-                  <TableHeader>Home/Away</TableHeader>
+                  <TableHeader>Jersey</TableHeader>
                   <TableHeader>Opponent</TableHeader>
                   <TableHeader>Result</TableHeader>
                 </tr>

@@ -119,14 +119,14 @@ const Navbar = (): JSX.Element => {
                   Tournaments
                 </a>
               </Link>
-              <Link href="/futsal">
+              {/* <Link href="/futsal">
                 <a
                   onClick={() => setMenuOpen(false)}
                   className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Futsal
                 </a>
-              </Link>
+              </Link> */}
             </>
           )}
         <LoginBtn className="my-2 md:my-0 w-full md:w-auto" />
