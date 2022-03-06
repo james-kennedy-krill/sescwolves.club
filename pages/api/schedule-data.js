@@ -31,7 +31,8 @@ export default [
         field: "6sm",
         homeOrAway: "away",
         opponent: "EST 12G Red",
-        result: "--",
+        result: "L 2-7",
+        notes: "Goals: Elle, Sidney. Goalies: Amara, Etta",
       },
       {
         team: "Bronze/White",
@@ -52,7 +53,9 @@ export default [
         field: "8sm",
         homeOrAway: "away",
         opponent: "Pacific FC 12G Fuego",
-        result: "--",
+        result: "W 3-1",
+        notes:
+          "Goals: Isa, Camille (2). Assists: Olivia, Nora B., Isa. Goalies: Lucia, Etta",
       },
       {
         team: "Bronze/White",
