@@ -34,6 +34,12 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
         {user && (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col space-y-4">
+              <Link href="/schedule">
+                <NavButton>
+                  Games
+                  <span>Game schedules for both teams</span>
+                </NavButton>
+              </Link>
               <Link href="/team">
                 <NavButton>
                   Team Roster <span>U10 Wolves have two teams:</span>
@@ -45,12 +51,7 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
                   Futsal <span>Winter 2021/2022 Futsal Information</span>
                 </NavButton>
               </Link> */}
-              <Link href="/schedule">
-                <NavButton>
-                  Games
-                  <span>Game schedules for both teams</span>
-                </NavButton>
-              </Link>
+
               <Link href="/practices">
                 <NavButton>
                   Practices
