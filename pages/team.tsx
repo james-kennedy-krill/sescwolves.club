@@ -14,7 +14,7 @@ import {
 } from "./api/utils/Airtable";
 import { hasRole } from "../components/utils";
 
-type ButtonVariant = "all" | "Silver" | "Bronze";
+type ButtonVariant = "all" | "Blue" | "White";
 interface ButtonProps {
   variant?: ButtonVariant;
   selected?: boolean;
@@ -23,8 +23,8 @@ interface ButtonProps {
 const buttonVariant: Record<ButtonVariant, TwStyle> = {
   // Named class sets
   all: tw`bg-white text-black`,
-  Bronze: tw`bg-yellow-700 text-white`,
-  Silver: tw`bg-gray-300 text-black`,
+  White: tw`bg-white text-black border border-black`,
+  Blue: tw`bg-blue-500 text-white`,
 };
 
 const TeamButton = styled.button<ButtonProps>(({ selected }) => [
@@ -46,7 +46,7 @@ const Team = ({
 }) => {
   const [sortBy, setSortBy] = useState<string>("firstName");
   const [direction, setDirection] = useState<"asc" | "desc">("asc");
-  const [team, setTeam] = useState<"all" | "Silver" | "Bronze">("all");
+  const [team, setTeam] = useState<"all" | "Blue" | "White">("all");
   const [expand, setExpand] = useState<boolean>(false);
   const { players, setPlayers, sortPlayers, refreshPlayers } =
     useContext(PlayersContext);
@@ -154,18 +154,18 @@ const Team = ({
                   All
                 </TeamButton>
                 <TeamButton
-                  variant="Silver"
-                  selected={team === "Silver"}
-                  onClick={() => setTeam("Silver")}
+                  variant="Blue"
+                  selected={team === "Blue"}
+                  onClick={() => setTeam("Blue")}
                 >
-                  Silver
+                  Blue
                 </TeamButton>
                 <TeamButton
-                  variant="Bronze"
-                  selected={team === "Bronze"}
-                  onClick={() => setTeam("Bronze")}
+                  variant="White"
+                  selected={team === "White"}
+                  onClick={() => setTeam("White")}
                 >
-                  Bronze
+                  White
                 </TeamButton>
               </div>
             </div>
