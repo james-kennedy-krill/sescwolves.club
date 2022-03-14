@@ -1,4 +1,4 @@
-export default [
+const schedule = [
   {
     date: "February 20",
     games: [
@@ -76,7 +76,9 @@ export default [
         field: "8sm",
         homeOrAway: "home",
         opponent: "WA Timbers 12G East Predator 1",
-        result: "--",
+        result: "L 5-3",
+        notes:
+          "Goals: Camille (3). Assists: Olivia (2), Nora B. Goalies: Lucia",
       },
       {
         team: "Bronze/White",
@@ -84,7 +86,7 @@ export default [
         field: "8sm",
         homeOrAway: "home",
         opponent: "United PDX 12G Blue West",
-        result: "--",
+        result: "W 3-1",
       },
     ],
   },
@@ -173,3 +175,5 @@ export default [
     ],
   },
 ];
+
+export default schedule;
