@@ -99,7 +99,9 @@ const schedule = [
         field: "8sm",
         homeOrAway: "home",
         opponent: "FCSC 12G White",
-        result: "--",
+        result: "W 7-1",
+        notes:
+          "Goals: Nora B (2), Camille (2), Amara (2), Sidney. Goalies: Nora V",
       },
       {
         team: "Bronze/White",
@@ -120,7 +122,8 @@ const schedule = [
         field: "6sm",
         homeOrAway: "home",
         opponent: "OPFC LOSC 12G Blue",
-        result: "--",
+        result: "W 4-3",
+        notes: "Goals: Nora (2), Camille, Sidney. Goalies: Nora V, Etta",
       },
       {
         team: "Bronze/White",
