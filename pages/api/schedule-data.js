@@ -144,7 +144,8 @@ const schedule = [
         field: "8sm",
         homeOrAway: "home",
         opponent: "Pacific FC 12G Chaos",
-        result: "--",
+        result: "W 5-4",
+        notes: "Goals: Isa (2), Joan (2), Sidney. Goalies: Lucia, Etta",
       },
       {
         team: "Bronze/White",
