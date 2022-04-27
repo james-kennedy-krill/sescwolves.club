@@ -80,6 +80,14 @@ const Navbar = (): JSX.Element => {
           menuOpen ? "flex" : "hidden"
         }`}
       >
+        <Link href="/tryouts">
+          <a
+            onClick={() => setMenuOpen(false)}
+            className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
+          >
+            Tryouts
+          </a>
+        </Link>
         {user &&
           hasRole(user["https://www.sescwolves.club/roles"] as string[], [
             "Coach",
