@@ -54,11 +54,11 @@ const TryOuts = () => {
               </p>
             </div>
             <p className="pt-6">
-              <ul class="list-disc list-inside ml-2">
+              <ul className="list-disc list-inside ml-2">
                 <li>Look for us on the turf field.</li>
                 <li>
                   Bring:
-                  <ul class="list-inside list-disc ml-4">
+                  <ul className="list-inside list-disc ml-4">
                     <li>a water bottle</li>
                     <li>a size 4 ball</li>
                     <li>
