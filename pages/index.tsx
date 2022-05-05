@@ -77,16 +77,19 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
           </div>
         )}
         {!user && (
-          <div>
-            <Link href="/api/auth/login">
-              <LoginButton>
-                <span className="text-2xl italic">Are you a wolf?</span>
-                <span className="text-xs uppercase">Click here to login</span>
-              </LoginButton>
-            </Link>
-            <p tw="mt-2 text-gray-500 italic">
-              You must be a member of the team to view this website.
-            </p>
+          // <div>
+          //   <Link href="/api/auth/login">
+          //     <LoginButton>
+          //       <span className="text-2xl italic">Are you a wolf?</span>
+          //       <span className="text-xs uppercase">Click here to login</span>
+          //     </LoginButton>
+          //   </Link>
+          //   <p tw="mt-2 text-gray-500 italic">
+          //     You must be a member of the team to view this website.
+          //   </p>
+          // </div>
+          <div className="text-center py-6 text-xl">
+            <p>We are rebuilding. Be back soon.</p>
           </div>
         )}
       </Container>

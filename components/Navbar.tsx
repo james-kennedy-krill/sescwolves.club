@@ -138,7 +138,7 @@ const Navbar = (): JSX.Element => {
               </Link> */}
             </>
           )}
-        <LoginBtn className="my-2 md:my-0 w-full md:w-auto" />
+        {/* <LoginBtn className="my-2 md:my-0 w-full md:w-auto" /> */}
         {user && <Account />}
       </div>
     </div>

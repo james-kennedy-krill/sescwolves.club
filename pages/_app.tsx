@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import { PlayersProvider } from "../contexts/PlayersContext";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="container mx-auto md:max-w-3xl">
           <Component {...pageProps} />
         </div>
+        <Footer />
       </PlayersProvider>
     </UserProvider>
   );
