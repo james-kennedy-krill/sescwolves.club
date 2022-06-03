@@ -44,9 +44,9 @@ const Team = ({
   error: Error | undefined;
   isLoading: boolean;
 }) => {
-  const [sortBy, setSortBy] = useState<string>("firstName");
+  const [sortBy, setSortBy] = useState<string>("number");
   const [direction, setDirection] = useState<"asc" | "desc">("asc");
-  const [team, setTeam] = useState<"all" | "Blue" | "White">("all");
+  const [team, setTeam] = useState<"all" | "Blue" | "White">("Blue");
   const [expand, setExpand] = useState<boolean>(false);
   const { players, setPlayers, sortPlayers, refreshPlayers } =
     useContext(PlayersContext);
@@ -79,14 +79,17 @@ const Team = ({
           <>
             <div className="bg-white rounded py-2 px-4 shadow-lg mt-5">
               <h1 className="text-4xl font-bold text-center mb-2">
-                SESC U10 Girls
+                SESC 2012 (U11) Girls
               </h1>
               <p className="flex items-center justify-around">
                 <span>
                   <strong>Coach:</strong> Robin Krill
                 </span>
                 <span>
-                  <strong>Assistant Coach:</strong> James Krill
+                  <strong>Coach:</strong> James Krill
+                </span>
+                <span>
+                  <strong>Assistant Coach:</strong> Andy Garber
                 </span>
               </p>
             </div>
@@ -98,6 +101,7 @@ const Team = ({
                     onChange={(e) => setSortBy(e.target.value)}
                     className="rounded p-1 border-2 border-gray-200 mr-5"
                   >
+                    <option value="number">Number</option>
                     <option value="firstName">First Name</option>
                     <option value="lastName">Last Name</option>
                     {user &&
@@ -144,7 +148,7 @@ const Team = ({
                   )}
               </div>
             </div>
-            <div className="py-2 px-4 mt-3">
+            {/* <div className="py-2 px-4 mt-3">
               <div className="flex items-center justify-between mt-3 pb-2">
                 <TeamButton
                   variant="all"
@@ -168,11 +172,10 @@ const Team = ({
                   White
                 </TeamButton>
               </div>
-            </div>
+            </div> */}
             {players && (
               <ul>
                 {players.map((player) => {
-                  console.log(player);
                   if (team !== "all" && team !== player?.fields?.team) {
                     return null;
                   }

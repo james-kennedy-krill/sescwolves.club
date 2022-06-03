@@ -16,13 +16,14 @@ export type Player = {
     lastName: string;
     number?: string;
     position?: string[];
+    dob?: string;
     rating?: number;
     dribbling?: number;
     passing?: number;
     shooting?: number;
     aggressiveness?: number;
     attention?: number;
-    intelligence?: number;
+    vision?: number;
     player_stats?: string[];
   };
   stats?: PlayerStats;

@@ -34,16 +34,15 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
         {user && (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col space-y-4">
-              <Link href="/schedule">
+              {/* <Link href="/schedule">
                 <NavButton>
                   Games
                   <span>Game schedules for both teams</span>
                 </NavButton>
-              </Link>
+              </Link> */}
               <Link href="/team">
                 <NavButton>
-                  Team Roster <span>U10 Wolves have two teams:</span>
-                  <span> Blue (Gold) and White (Bronze)</span>
+                  Team Roster <span>Who is on the team</span>
                 </NavButton>
               </Link>
               {/* <Link href="/futsal">
@@ -55,17 +54,17 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
               <Link href="/practices">
                 <NavButton>
                   Practices
-                  <span>Practice schedules for both teams</span>
+                  <span>Practice schedules and rules</span>
                 </NavButton>
               </Link>
 
-              <Link href="/tournaments">
+              {/* <Link href="/tournaments">
                 <NavButton>
                   Tournaments<span>Schedule, Results, Photos and more</span>
                 </NavButton>
-              </Link>
+              </Link> */}
             </div>
-            <div className="mt-5 md:mt-0 md:ml-5 md:w-1/2">
+            <div className="mt-5 md:mt-0 md:ml-5 md:w-1/2 flex-grow">
               <Image src={summerslam_image} alt="Photo of team at tournament" />
               <p className="italic font-bold">Summer Slam 2021 Champions!</p>
               <p className="text-sm italic text-gray-400 mb-4">
@@ -77,20 +76,20 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
           </div>
         )}
         {!user && (
-          // <div>
-          //   <Link href="/api/auth/login">
-          //     <LoginButton>
-          //       <span className="text-2xl italic">Are you a wolf?</span>
-          //       <span className="text-xs uppercase">Click here to login</span>
-          //     </LoginButton>
-          //   </Link>
-          //   <p tw="mt-2 text-gray-500 italic">
-          //     You must be a member of the team to view this website.
-          //   </p>
-          // </div>
-          <div className="text-center py-6 text-xl">
-            <p>We are rebuilding. Be back soon.</p>
+          <div>
+            <Link href="/api/auth/login">
+              <LoginButton>
+                <span className="text-2xl italic">Are you a wolf?</span>
+                <span className="text-xs uppercase">Click here to login</span>
+              </LoginButton>
+            </Link>
+            <p tw="mt-2 text-gray-500 italic">
+              You must be a member of the team to view this website.
+            </p>
           </div>
+          // <div className="text-center py-6 text-xl">
+          //   <p>We are rebuilding. Be back soon.</p>
+          // </div>
         )}
       </Container>
     </div>

@@ -28,7 +28,7 @@ const Player = ({
     "shooting",
     "aggressiveness",
     "attention",
-    "intelligence",
+    "vision",
   ];
 
   const statColors = [
@@ -58,11 +58,11 @@ const Player = ({
         <h2 className="text-xl font-bold col-start-2 col-span-3">
           {player.fields.firstName} {player.fields.lastName}
         </h2>
-        {!!player.fields.position?.length && (
+        {/* {!!player.fields.position?.length && (
           <div className="col-start-5 col-span-2">
             <span className="italic">{player.fields.position.join(", ")}</span>
           </div>
-        )}
+        )} */}
         {user &&
           hasRole(
             user["https://www.sescwolves.club/roles"] as string[],
@@ -156,13 +156,13 @@ const Player = ({
               "Coach"
             ) && (
               <div className="mt-4">
-                <p className="flex items-center justify-around">
+                {/* <p className="flex items-center justify-around">
                   <Link href={`/players/edit/${player.id}`}>
                     <a className="w-full rounded bg-blue-800 text-white py-2 px-10 flex items-center justify-center">
                       Edit
                     </a>
                   </Link>
-                </p>
+                </p> */}
               </div>
             )}
         </div>

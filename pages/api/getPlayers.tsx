@@ -11,7 +11,7 @@ const getPlayers = async (req: NextApiRequest, res: NextApiResponse) => {
       throw new Error("Query param must be string");
     }
     const records: readonly any[] = await table
-      .select({ sort: [{ field: sortBy, direction }] })
+      .select({ view: "U11 Active", sort: [{ field: sortBy, direction }] })
       .firstPage();
     const minifiedRecords = minifyRecords(records);
     res.statusCode = 200;

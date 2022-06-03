@@ -95,14 +95,14 @@ const Navbar = (): JSX.Element => {
             "Family",
           ]) && (
             <>
-              <Link href="/schedule">
+              {/* <Link href="/schedule">
                 <a
                   onClick={() => setMenuOpen(false)}
                   className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Games
                 </a>
-              </Link>
+              </Link> */}
               <Link href="/team">
                 <a
                   onClick={() => setMenuOpen(false)}
@@ -120,14 +120,14 @@ const Navbar = (): JSX.Element => {
                   Practices
                 </a>
               </Link>
-              <Link href="/tournaments">
+              {/* <Link href="/tournaments">
                 <a
                   onClick={() => setMenuOpen(false)}
                   className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
                 >
                   Tournaments
                 </a>
-              </Link>
+              </Link> */}
               {/* <Link href="/futsal">
                 <a
                   onClick={() => setMenuOpen(false)}
@@ -138,7 +138,7 @@ const Navbar = (): JSX.Element => {
               </Link> */}
             </>
           )}
-        {/* <LoginBtn className="my-2 md:my-0 w-full md:w-auto" /> */}
+        <LoginBtn className="my-2 md:my-0 w-full md:w-auto" />
         {user && <Account />}
       </div>
     </div>

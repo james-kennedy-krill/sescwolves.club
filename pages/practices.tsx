@@ -35,10 +35,29 @@ const Practices = () => {
             Practices
           </h1>
           <hr />
-          <p className="italic mb-2 text-center">
-            Spring practices are here @ La Salle High School on Mondays and
-            Wednesdays, 6:30 - 8:00pm!
-          </p>
+          <div className="italic mt-4 text-center text-lg">
+            <p className="text-xl mb-4">
+              Summer practices are here: June - August 2022
+            </p>
+            <div className="border p-4 mb-4 bg-blue-100 rounded">
+              @{" "}
+              <Link href="https://www.google.com/maps/place/Brentwood+Field+%233/@45.4728703,-122.6017136,17z/data=!4m12!1m6!3m5!1s0x5495a006c45d2a65:0xa74ee1e9634ff5e2!2sBrentwood+City+Park!8m2!3d45.4734048!4d-122.6010537!3m4!1s0x0:0x92abbfc57665c874!8m2!3d45.472749!4d-122.6001602">
+                <a className="underline" target="_blank">
+                  Brentwood Park
+                </a>
+              </Link>{" "}
+              on Mondays from 6:00pm - 7:30pm,
+            </div>
+            <div className="border p-4 my-2 mb-6 bg-blue-200 rounded">
+              @{" "}
+              <Link href="https://www.google.com/maps/place/Eastside+Timbers+%26+Thorns+Sports+Complex/@45.4885788,-122.4928889,15z/data=!3m1!4b1!4m5!3m4!1s0x54959f4b135bf7db:0x5fa367ac6cc0e5d7!8m2!3d45.4885791!4d-122.4841556">
+                <a className="underline" target="_blank">
+                  Eastside Timbers/Thorns complex
+                </a>
+              </Link>{" "}
+              on Wednesdays from 5:00 - 6:30pm!
+            </div>
+          </div>
           <hr />
           <div id="fall-practices" className="my-5 py-5">
             <div className="p-10 pt-0">
@@ -82,37 +101,6 @@ const Practices = () => {
                   When we have a problem we will find a coach to help.
                 </li>
               </ol>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-2 text-center">
-              Spring 2022 Practices
-            </h2>
-
-            <p className="text-center italic">January 31 - February 23rd</p>
-
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold">Mondays &amp; Wednesdays</h3>
-              <p className="mb-1 flex items-start justify-between">
-                <span>
-                  <Link href="https://www.google.com/maps/dir//La+Salle+Catholic+College+Preparatory,+11999+SE+Fuller+Rd,+Milwaukie,+OR+97222/@45.4359654,-122.589035,640m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x54957573ec110af5:0x4697b8d2aab1b85f!2m2!1d-122.5869643!2d45.4365526!3e0">
-                    <a className="text-blue-600 underline" target="_blank">
-                      <strong>La Salle</strong>
-                    </a>
-                  </Link>
-                </span>
-                <span className="text-gray-900 italic font-bold">
-                  6:30pm - 8:00pm
-                </span>
-              </p>
-
-              <Link href="https://www.google.com/maps/dir//La+Salle+Catholic+College+Preparatory,+11999+SE+Fuller+Rd,+Milwaukie,+OR+97222/@45.4359654,-122.589035,640m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x54957573ec110af5:0x4697b8d2aab1b85f!2m2!1d-122.5869643!2d45.4365526!3e0">
-                <a target="_blank">
-                  <Image src={lasalle} alt="satallite of La Salle" />
-                </a>
-              </Link>
-              <p className="text-gray-500 text-sm italic">
-                Click image for directions
-              </p>
             </div>
           </div>
         </div>
