@@ -19,7 +19,7 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
   return (
     <div>
       <Head>
-        <title>SESC - U10 Girls - Wolves - Silver/Gold - Bronze</title>
+        <title>SESC - 2012 Girls - Wolves</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
