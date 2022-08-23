@@ -2,6 +2,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "../styles/common-styles";
 
 const TryOuts = () => {
   return (
@@ -11,7 +12,7 @@ const TryOuts = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="bg-white rounded p-6 shadow-lg mt-5 prose">
+        <Container className="prose">
           <h1 className="text-4xl font-bold text-center mb-2">
             2022/2023 Tryouts
           </h1>
@@ -38,7 +39,7 @@ const TryOuts = () => {
               <li>Clarke Daniel</li>
             </ul>
           </div>
-        </div>
+        </Container>
       </main>
     </div>
   );

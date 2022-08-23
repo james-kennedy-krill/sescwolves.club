@@ -43,6 +43,7 @@ const Navbar = (): JSX.Element => {
   return (
     <div
       ref={wrapperRef}
+      id="header"
       className="flex relative justify-between items-center py-4 px-2 bg-gray-200 shadow"
     >
       <Link href="/">
@@ -55,7 +56,7 @@ const Navbar = (): JSX.Element => {
           <span>SESC Wolves</span>
           <span className="hidden xl:inline">
             {" "}
-            - SouthEast Soccer Club U10 Girls
+            - SouthEast Soccer Club 2012 Girls
           </span>
         </a>
       </Link>
@@ -80,14 +81,14 @@ const Navbar = (): JSX.Element => {
           menuOpen ? "flex" : "hidden"
         }`}
       >
-        <Link href="/tryouts">
+        {/* <Link href="/tryouts">
           <a
             onClick={() => setMenuOpen(false)}
             className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
           >
             Tryouts
           </a>
-        </Link>
+        </Link> */}
         {user &&
           hasRole(user["https://www.sescwolves.club/roles"] as string[], [
             "Coach",
