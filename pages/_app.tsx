@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <UserProvider>
       <PlayersProvider>
         <Navbar />
-        <div className="container mx-auto md:max-w-3xl">
+        <div className="container mx-auto md:max-w-5xl pb-36 md:pb-24">
           <Component {...pageProps} />
         </div>
         <Footer />

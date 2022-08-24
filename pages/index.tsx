@@ -7,6 +7,7 @@ import { table, minifyRecords, Player } from "./api/utils/Airtable";
 import { Container, NavButton } from "../styles/common-styles";
 
 import summerslam_image from "../public/summer-slam2021.jpg";
+import beavertoncup_image from "../public/2022-team-tournament-champs.jpg";
 
 const LoginButton = tw.a`flex flex-col justify-center items-center bg-blue-500 hover:bg-blue-700 text-white py-3 px-6 rounded text-center cursor-pointer`;
 
@@ -34,6 +35,11 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
         {user && (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col space-y-4">
+              <Link href="/philosophy">
+                <NavButton>
+                  Philosophy <span>How we approach soccer</span>
+                </NavButton>
+              </Link>
               {/* <Link href="/schedule">
                 <NavButton>
                   Games
@@ -65,13 +71,10 @@ export default function Home({ initialPlayers }: { initialPlayers: Player[] }) {
               </Link> */}
             </div>
             <div className="mt-5 md:mt-0 md:ml-5 md:w-1/2 flex-grow">
-              <Image src={summerslam_image} alt="Photo of team at tournament" />
-              <p className="italic font-bold">Summer Slam 2021 Champions!</p>
-              <p className="text-sm italic text-gray-400 mb-4">
-                Wolves (left to right): Coach James, Sidney, Nora B., Isa,
-                Olivia, Amara, Jozy, Camille, Coach Robin, Skye, Etta, Cora,
-                Lucia, Coach Mkonu
-              </p>
+              <Image
+                src={beavertoncup_image}
+                alt="Photo of team at tournament"
+              />
             </div>
           </div>
         )}

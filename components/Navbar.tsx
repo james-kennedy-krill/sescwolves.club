@@ -104,6 +104,14 @@ const Navbar = (): JSX.Element => {
                   Games
                 </a>
               </Link> */}
+              <Link href="/philosophy">
+                <a
+                  onClick={() => setMenuOpen(false)}
+                  className="w-full md:w-auto rounded bg-gray-100 hover:bg-gray-300 py-2 px-4 my-2 md:my-0"
+                >
+                  Philosophy
+                </a>
+              </Link>
               <Link href="/team">
                 <a
                   onClick={() => setMenuOpen(false)}
